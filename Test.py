@@ -1,7 +1,16 @@
-import os
 import requests
+import os
+import subprocess
+import urllib.parse
+import json
+import argparse
 from urllib.parse import quote
+from pathlib import Path
 
+
+# 使用示例
+download_folder_path = "lj2/assets/game/native"  # 替换为你的本地文件夹路径
+download_base_url = "https://casino-wbgame.tadagaming.com/lj2/assets/game/native/"
 def find_and_download_bin_files(folder_path, base_url):
     # 确保文件夹存在
     if not os.path.exists(folder_path):
@@ -49,10 +58,8 @@ def find_and_download_bin_files(folder_path, base_url):
                 except Exception as e:
                     print(f"处理文件 {rel_path} 时出错: {str(e)}")
 
-# 使用示例
-folder_path = "mw3/assets/game/native"  # 替换为你的本地文件夹路径
-base_url = "https://casino-wbgame.jiligames.com/mw3/assets/game/native/"
-# find_and_download_bin_files(folder_path, base_url)
+
+# find_and_download_bin_files(download_folder_path, download_base_url)
 
 
 import os
@@ -133,6 +140,34 @@ def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
 
 
 # 使用示例
-folder_path = "./"  # 替换为你的本地文件夹路径
-astcenc_path = "./astcenc"  # 替换为你的 astcenc 工具路径
-convert_webp_to_astc(folder_path, astcenc_path)
+convert_folder_path = "./"  # 替换为你的本地文件夹路径
+convert_astcenc_path = "./tools/astcenc/windows/bin/astcenc-avx2.exe"  # 替换为你的 astcenc 工具路径
+# convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+
+def build_all():
+    # 在这里实现构建所有的逻辑
+    # 下載缺失的文件
+    find_and_download_bin_files(download_folder_path, download_base_url)
+    # 添加並轉換文件(png->astc)
+    convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+    pass
+
+# main
+if __name__ == "__main__":
+    #     通過參數來執行命令
+    parser = argparse.ArgumentParser(
+        description="Build and compile Protocol Buffers files."
+    )
+    parser.add_argument("--build", action="store_true", help="Compile all .proto files")
+    parser.add_argument("--download", action="store_true", help="Download missing files")
+    parser.add_argument("--convert", action="store_true", help="Convert images to ASTC format")
+
+    args = parser.parse_args()
+
+    if args.build:
+        build_all()
+    if args.download:
+        find_and_download_bin_files(download_folder_path, download_base_url)
+    if args.convert:
+        convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+    pass
