@@ -6687,7 +6687,7 @@ System.register(
                           integrity: "",
                           duplex: 'half'  // 仅在 body 存在时设置 duplex
                         };
-                        let newUrl=DW_URL_HTTP+"save-game-data.api";
+                        let newUrl=DW_URL_HTTP+"/save-game-data.api";
                         const request= new Request(newUrl, init);
                         // 使用 fetch API 发送请求 如果 TEST 为 true 不用請求接口
                         if(TEST){
@@ -8794,7 +8794,7 @@ System.register(
                     e.data = n;
                     var t = new d();
                     (t.reqData = _.lj2Proto.GemInfo.encode(e).finish()),
-                        (console.log("CheckAndSend:",t,e))
+                        (console.log("CheckAndSend:",t,e)),
                       (t.info = { D: 102 }),
                       v.SendGameCustomizedCommand(t, 102, function (n, e) {});
                   }),
