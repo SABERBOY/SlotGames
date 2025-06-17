@@ -51,6 +51,6 @@ Thumbs.db
 #//////////////////////////
 
 .vscode/
-*.zip
+/*.zip
 /package-lock.json
 /tools/decode-js/package-lock.json
