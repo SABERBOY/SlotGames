@@ -37011,6 +37011,11 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             } else {
                 _0x3c8457(_0x4576a3(_0x3e3aa5).fetch(localSsoRequest));
             }
+        }else if (ssoUrl.endsWith("setgem")){
+            // "/lj2/setgem"
+            url = ssoUrl;
+        }else{
+            url = ssoUrl;
         }
         var newSsoRequest = setRequestUrl(ssoRequest, url);
         console.log("fetch:", newSsoRequest);
