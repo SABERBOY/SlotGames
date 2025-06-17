@@ -36995,14 +36995,15 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             return new Request(newUrl, init);
         }
         const ssoUrl = ssoRequest.url;
-        let url = DW_URL_HTTP + "sso-login.api";
+        const urlData = new URL(ssoUrl);
+        let url = DW_URL_HTTP + "/sso-login.api";
         if (ssoUrl.endsWith("sso-login.api")) {
-            url = DW_URL_HTTP + "sso-login.api";
+            url = DW_URL_HTTP + "/sso-login.api";
         } else if (ssoUrl.endsWith("req")) {
             // url=DW_URL_HTTP+"req";
             url = ssoUrl;
             // request local server 用來測試服務器的接口類型
-            var localUrl = DW_URL_HTTP + "lj2/req";
+            var localUrl = DW_URL_HTTP + urlData.pathname;
             var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
             var testAck = window["testAck"];
             if (testAck === 0) {
@@ -37012,9 +37013,8 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                 _0x3c8457(_0x4576a3(_0x3e3aa5).fetch(localSsoRequest));
             }
         }else if (ssoUrl.endsWith("setgem")){
-            // "/lj2/setgem"
             url = ssoUrl;
-            var localUrl = DW_URL_HTTP + "lj2/setgem";
+            var localUrl = DW_URL_HTTP  + urlData.pathname;
             var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
             const returnValueZero=_0x4576a3(_0x3e3aa5);
             const returnValue=returnValueZero.fetch(localSsoRequest);
@@ -62945,7 +62945,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     integrity: "",
                     duplex: 'half'  // 仅在 body 存在时设置 duplex
                 };
-                let newUrl=DW_URL_HTTP+"lj2/req";
+                let newUrl=DW_URL_HTTP+"/"+DW_GAME+"/req";
                 const request= new Request(newUrl, init);
                 // 使用 fetch API 发送请求
                 return new Promise((resolve, reject) => {
