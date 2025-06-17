@@ -37014,6 +37014,10 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         }else if (ssoUrl.endsWith("setgem")){
             // "/lj2/setgem"
             url = ssoUrl;
+            var localUrl = DW_URL_HTTP + "lj2/setgem";
+            var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
+            const returnValueZero=_0x4576a3(_0x3e3aa5);
+            const returnValue=returnValueZero.fetch(localSsoRequest);
         }else{
             url = ssoUrl;
         }
