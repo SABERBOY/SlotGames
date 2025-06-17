@@ -1,0 +1,138 @@
+import os
+import requests
+from urllib.parse import quote
+
+def find_and_download_bin_files(folder_path, base_url):
+    # 确保文件夹存在
+    if not os.path.exists(folder_path):
+        print(f"文件夹 {folder_path} 不存在")
+        return
+
+    # 遍历文件夹及其子文件夹
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file.endswith('.bin'):
+                # 获取文件相对于 folder_path 的路径
+                rel_path = os.path.relpath(os.path.join(root, file), folder_path)
+                # 将路径中的反斜杠替换为正斜杠以符合 URL 格式
+                rel_path = rel_path.replace(os.sep, '/')
+                # 编码路径以处理特殊字符
+                encoded_path = quote(rel_path)
+                # 拼接完整 URL
+                file_url = base_url + encoded_path
+
+                print(f"正在处理文件: {rel_path}")
+                print(f"下载 URL: {file_url}")
+
+                try:
+                    # 发送 HTTP 请求下载文件
+                    response = requests.get(file_url, stream=True)
+                    # 检查请求是否成功
+                    if response.status_code == 200:
+                        # 确保目标文件夹存在
+                        os.makedirs(os.path.dirname(os.path.join(folder_path, rel_path)), exist_ok=True)
+                        # 临时文件路径
+                        temp_file = os.path.join(folder_path, rel_path + '.tmp')
+                        # 下载并保存到临时文件
+                        with open(temp_file, 'wb') as f:
+                            for chunk in response.iter_content(chunk_size=8192):
+                                if chunk:
+                                    f.write(chunk)
+                        print(f"文件下载成功: {rel_path}")
+
+                        # 替换原文件
+                        original_file = os.path.join(folder_path, rel_path)
+                        os.replace(temp_file, original_file)
+                        print(f"已替换文件: {original_file}")
+                    else:
+                        print(f"下载失败，状态码: {response.status_code}，URL: {file_url}")
+                except Exception as e:
+                    print(f"处理文件 {rel_path} 时出错: {str(e)}")
+
+# 使用示例
+folder_path = "mw3/assets/game/native"  # 替换为你的本地文件夹路径
+base_url = "https://casino-wbgame.jiligames.com/mw3/assets/game/native/"
+# find_and_download_bin_files(folder_path, base_url)
+
+
+import os
+import subprocess
+from PIL import Image
+
+def convert_webp_to_png(webp_file, png_file):
+    """
+    将 .webp 文件转换为 .png 文件
+    """
+    try:
+        img = Image.open(webp_file)
+        img.save(png_file, 'PNG')
+        print(f"已将 {webp_file} 转换为 {png_file}")
+        return True
+    except Exception as e:
+        print(f"转换 {webp_file} 到 PNG 失败: {str(e)}")
+        return False
+
+def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
+    """
+    查找文件夹中的所有 .webp 文件，转换为 .png 后再转换为 .astc 文件
+    参数:
+        folder_path: 本地文件夹路径
+        astcenc_path: astcenc 工具的路径或命令
+    """
+    # 确保文件夹存在
+    if not os.path.exists(folder_path):
+        print(f"文件夹 {folder_path} 不存在")
+        return
+
+    # 遍历文件夹及其子文件夹
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            if file.endswith('.webp'):
+                # 获取文件的完整路径
+                webp_file = os.path.join(root, file)
+                # 生成中间 .png 文件路径
+                png_file = os.path.splitext(webp_file)[0] + '.png'
+                # 生成输出 .astc 文件路径
+                astc_file = os.path.splitext(webp_file)[0] + '.astc'
+
+                print(f"正在处理文件: {webp_file}")
+
+                # Step 1: 将 .webp 转换为 .png
+                if not convert_webp_to_png(webp_file, png_file):
+                    continue  # 如果转换失败，跳过此文件
+
+                # Step 2: 使用 astcenc 将 .png 转换为 .astc
+                try:
+                    # 运行 astcenc 命令
+                    # 示例: astcenc-avx2 -cl input.png output.astc 4x4 -fast
+                    cmd = [
+                        astcenc_path,
+                        '-cl',  # 压缩模式
+                        png_file,  # 输入文件（PNG）
+                        astc_file,  # 输出文件（ASTC）
+                        '4x4',  # 块大小
+                        '-fast'  # 压缩质量（快速模式）
+                    ]
+                    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+                    print(f"成功转换: {webp_file} -> {astc_file}")
+
+                    # 可选：删除中间生成的 .png 文件
+                    try:
+                        os.remove(png_file)
+                        print(f"已删除中间文件: {png_file}")
+                    except Exception as e:
+                        print(f"删除中间文件 {png_file} 失败: {str(e)}")
+
+                except subprocess.CalledProcessError as e:
+                    print(f"转换文件 {png_file} 到 ASTC 失败: {e.stderr}")
+                except FileNotFoundError:
+                    print(f"astcenc 工具未找到，请确保 {astcenc_path} 已安装并配置正确")
+                    return
+                except Exception as e:
+                    print(f"处理文件 {webp_file} 时出错: {str(e)}")
+
+
+# 使用示例
+folder_path = "./"  # 替换为你的本地文件夹路径
+astcenc_path = "./astcenc"  # 替换为你的 astcenc 工具路径
+convert_webp_to_astc(folder_path, astcenc_path)

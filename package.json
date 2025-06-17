@@ -1,0 +1,18 @@
+{
+  "name": "wheel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node TestGameLogic.js",
+    "run:https": "http-server -S -C ./pem/cert.pem -K ./pem/key.pem ./ --cors --gzip",
+    "run:candy": "caddy file-server",
+    "run": "http-server -S ./",
+    "run:dev": "http-server ./",
+    "clear": "python build.py clear",
+    "copy": "python build.py copy",
+    "build:dev": "npm run clear && npm run copy",
+    "run:test": "cd ./build && http-server -S ./build -o -c-1 --cors -p 8888"
+  },
+  "private": true
+}
