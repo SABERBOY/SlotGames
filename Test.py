@@ -10,8 +10,8 @@ import glob
 import subprocess
 
 # 使用示例
-download_folder_path = "lj2/assets/game/native"  # 替换为你的本地文件夹路径
-download_base_url = "https://casino-wbgame.tadagaming.com/lj2/assets/game/native/"
+download_folder_path = "lj2/assets/"  # 替换为你的本地文件夹路径
+download_base_url = "https://casino-wbgame.tadagaming.com/lj2/assets/"
 
 
 def find_and_download_bin_files(folder_path, base_url):
