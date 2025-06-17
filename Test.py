@@ -6,11 +6,14 @@ import json
 import argparse
 from urllib.parse import quote
 from pathlib import Path
-
+import glob
+import subprocess
 
 # 使用示例
 download_folder_path = "lj2/assets/game/native"  # 替换为你的本地文件夹路径
 download_base_url = "https://casino-wbgame.tadagaming.com/lj2/assets/game/native/"
+
+
 def find_and_download_bin_files(folder_path, base_url):
     # 确保文件夹存在
     if not os.path.exists(folder_path):
@@ -20,11 +23,11 @@ def find_and_download_bin_files(folder_path, base_url):
     # 遍历文件夹及其子文件夹
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.endswith('.bin'):
+            if file.endswith(".bin"):
                 # 获取文件相对于 folder_path 的路径
                 rel_path = os.path.relpath(os.path.join(root, file), folder_path)
                 # 将路径中的反斜杠替换为正斜杠以符合 URL 格式
-                rel_path = rel_path.replace(os.sep, '/')
+                rel_path = rel_path.replace(os.sep, "/")
                 # 编码路径以处理特殊字符
                 encoded_path = quote(rel_path)
                 # 拼接完整 URL
@@ -39,11 +42,14 @@ def find_and_download_bin_files(folder_path, base_url):
                     # 检查请求是否成功
                     if response.status_code == 200:
                         # 确保目标文件夹存在
-                        os.makedirs(os.path.dirname(os.path.join(folder_path, rel_path)), exist_ok=True)
+                        os.makedirs(
+                            os.path.dirname(os.path.join(folder_path, rel_path)),
+                            exist_ok=True,
+                        )
                         # 临时文件路径
-                        temp_file = os.path.join(folder_path, rel_path + '.tmp')
+                        temp_file = os.path.join(folder_path, rel_path + ".tmp")
                         # 下载并保存到临时文件
-                        with open(temp_file, 'wb') as f:
+                        with open(temp_file, "wb") as f:
                             for chunk in response.iter_content(chunk_size=8192):
                                 if chunk:
                                     f.write(chunk)
@@ -54,7 +60,9 @@ def find_and_download_bin_files(folder_path, base_url):
                         os.replace(temp_file, original_file)
                         print(f"已替换文件: {original_file}")
                     else:
-                        print(f"下载失败，状态码: {response.status_code}，URL: {file_url}")
+                        print(
+                            f"下载失败，状态码: {response.status_code}，URL: {file_url}"
+                        )
                 except Exception as e:
                     print(f"处理文件 {rel_path} 时出错: {str(e)}")
 
@@ -66,18 +74,20 @@ import os
 import subprocess
 from PIL import Image
 
+
 def convert_webp_to_png(webp_file, png_file):
     """
     将 .webp 文件转换为 .png 文件
     """
     try:
         img = Image.open(webp_file)
-        img.save(png_file, 'PNG')
+        img.save(png_file, "PNG")
         print(f"已将 {webp_file} 转换为 {png_file}")
         return True
     except Exception as e:
         print(f"转换 {webp_file} 到 PNG 失败: {str(e)}")
         return False
+
 
 def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
     """
@@ -94,13 +104,13 @@ def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
     # 遍历文件夹及其子文件夹
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.endswith('.webp'):
+            if file.endswith(".webp"):
                 # 获取文件的完整路径
                 webp_file = os.path.join(root, file)
                 # 生成中间 .png 文件路径
-                png_file = os.path.splitext(webp_file)[0] + '.png'
+                png_file = os.path.splitext(webp_file)[0] + ".png"
                 # 生成输出 .astc 文件路径
-                astc_file = os.path.splitext(webp_file)[0] + '.astc'
+                astc_file = os.path.splitext(webp_file)[0] + ".astc"
 
                 print(f"正在处理文件: {webp_file}")
 
@@ -114,13 +124,15 @@ def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
                     # 示例: astcenc-avx2 -cl input.png output.astc 4x4 -fast
                     cmd = [
                         astcenc_path,
-                        '-cl',  # 压缩模式
+                        "-cl",  # 压缩模式
                         png_file,  # 输入文件（PNG）
                         astc_file,  # 输出文件（ASTC）
-                        '4x4',  # 块大小
-                        '-fast'  # 压缩质量（快速模式）
+                        "4x4",  # 块大小
+                        "-fast",  # 压缩质量（快速模式）
                     ]
-                    result = subprocess.run(cmd, capture_output=True, text=True, check=True)
+                    result = subprocess.run(
+                        cmd, capture_output=True, text=True, check=True
+                    )
                     print(f"成功转换: {webp_file} -> {astc_file}")
 
                     # 可选：删除中间生成的 .png 文件
@@ -141,8 +153,66 @@ def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
 
 # 使用示例
 convert_folder_path = "./"  # 替换为你的本地文件夹路径
-convert_astcenc_path = "./tools/astcenc/windows/bin/astcenc-avx2.exe"  # 替换为你的 astcenc 工具路径
+convert_astcenc_path = (
+    "./tools/astcenc/windows/bin/astcenc-avx2.exe"  # 替换为你的 astcenc 工具路径
+)
 # convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+
+
+def run_decode_js(input_js, output_js):
+    """
+    进入 tools/decode-js/ 目录并执行 node src/main.js -t obfuscator -i 输入js -o 输出js
+    输入输出路径为相对于项目根目录的相对路径
+    """
+    print(f"正在解码: {input_js} -> {output_js}")
+    project_root = os.getcwd()
+    decode_js_dir = os.path.join(project_root, "tools", "decode-js")
+    # 保持输入输出路径为相对于项目根目录的路径
+    cmd = ["node", "src/main.js", "-t", "obfuscator", "-i", input_js, "-o", output_js]
+    print(f"执行命令: {' '.join(cmd)}")
+    subprocess.run(cmd, cwd=decode_js_dir, check=True)
+
+
+def decode_index_js_files():
+    """
+    查找 astarte2/3.6/web-mobile/assets/other/ 目录下以 index 开头的 js 文件，
+    并调用 run_decode_js 进行处理，输出文件放在输入文件夹中，文件名为原名加 _decoded.js
+    """
+    # input_dir = os.path.join("astarte2", "3.6", "web-mobile", "assets", "other")
+    # pattern = os.path.join(input_dir, "index*.js")
+    # files = glob.glob(pattern)
+    # for input_js in files:
+    #     base, ext = os.path.splitext(input_js)
+    #     output_js = f"{base}_decoded{ext}"
+    #     run_decode_js(os.path.abspath(input_js), os.path.abspath(output_js))
+
+    """
+    在所有根目录的文件夹中模糊查找是否有"3.6"的文件夹，
+    如果有就继续查找该文件夹中是否有"web-mobile"文件夹，
+    最终查找 assets/other 目录下以 index 开头的 js 文件并处理。
+    """
+    project_root = os.getcwd()
+    for root, dirs, files in os.walk(project_root):
+        # 查找名为"3.6"的文件夹
+        if "3.6" in dirs:
+            path_36 = os.path.join(root, "3.6")
+            # 查找"3.6"下的"web-mobile"
+            web_mobile_path = os.path.join(path_36, "web-mobile")
+            if os.path.isdir(web_mobile_path):
+                # assets/other 路径
+                other_path = os.path.join(web_mobile_path, "assets", "other")
+                if os.path.isdir(other_path):
+                    pattern = os.path.join(other_path, "index*.js")
+                    files = glob.glob(pattern)
+                    # 只獲取第一個文件
+                    files = files[:1]
+                    for input_js in files:
+                        base, ext = os.path.splitext(input_js)
+                        output_js = f"{base}_decoded{ext}"
+                        run_decode_js(
+                            os.path.abspath(input_js), os.path.abspath(output_js)
+                        )
+
 
 def build_all():
     # 在这里实现构建所有的逻辑
@@ -152,6 +222,7 @@ def build_all():
     convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
     pass
 
+
 # main
 if __name__ == "__main__":
     #     通過參數來執行命令
@@ -159,8 +230,15 @@ if __name__ == "__main__":
         description="Build and compile Protocol Buffers files."
     )
     parser.add_argument("--build", action="store_true", help="Compile all .proto files")
-    parser.add_argument("--download", action="store_true", help="Download missing files")
-    parser.add_argument("--convert", action="store_true", help="Convert images to ASTC format")
+    parser.add_argument(
+        "--download", action="store_true", help="Download missing files"
+    )
+    parser.add_argument(
+        "--convert", action="store_true", help="Convert images to ASTC format"
+    )
+    parser.add_argument(
+        "--decode", action="store_true", help="Decode obfuscated JavaScript files"
+    )
 
     args = parser.parse_args()
 
@@ -170,4 +248,5 @@ if __name__ == "__main__":
         find_and_download_bin_files(download_folder_path, download_base_url)
     if args.convert:
         convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
-    pass
+    if args.decode:
+        decode_index_js_files()

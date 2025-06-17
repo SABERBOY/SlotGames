@@ -18,6 +18,10 @@ convert:
 	python Test.py --convert
 .PHONY: convert
 
+decode:
+	python Test.py --decode
+.PHONY: decode
+
 govulncheck:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
 	govulncheck --show verbose ./...
