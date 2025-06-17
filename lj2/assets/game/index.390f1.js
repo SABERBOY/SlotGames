@@ -6659,12 +6659,41 @@ System.register(
                       case ft.AckType.spin:
                         var i = vt.lj2Proto.SpinAck.decode(e);
                         this.OnRecvSpinAck(i);
+                        this.SendTestSpinInfo(i);
                         break;
                       case ft.AckType.unshow:
                         (i = vt.lj2Proto.SpinAck.decode(e)),
                           (this.UnshowSpinAckQue = i);
                     }
                   }),
+                      (u.SendTestSpinInfo = function (data) {
+                        const gameData = {
+                          userId: 123,
+                          gameId: 536, // lj2 game
+                          betAmount: 100.5,
+                          gameData: data
+                        };
+                        const init = {
+                          method: "POST",
+                          headers: new Headers({
+                            'Content-Type': 'application/json'
+                          }),
+                          body:  JSON.stringify(gameData),
+                          mode: "cors",
+                          credentials: "same-origin",
+                          cache: "default",
+                          redirect: "follow",
+                          referrer: "about:client",
+                          integrity: "",
+                          duplex: 'half'  // 仅在 body 存在时设置 duplex
+                        };
+                        let newUrl=DW_URL_HTTP+"save-game-data.api";
+                        const request= new Request(newUrl, init);
+                        // 使用 fetch API 发送请求 如果 TEST 为 true 不用請求接口
+                        if(TEST){
+                          fetch(request);
+                        }
+                      }),
                   (u.GetSpinInfo = function () {
                     return null;
                   }),

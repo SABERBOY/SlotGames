@@ -22830,10 +22830,11 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }, !_0x392574.isNative && !_0xffdfca) {
             this.m_webUrl = _0x434952.GetWebUrl();
             var _0x50178a = /\?/g;
-            this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x50178a));
+            // this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x50178a));
             var _0x283f9c = _0x434952.GetWebUrl();
             var _0x3d32a4 = /\.com/g;
-            _0x283f9c = _0x283f9c.slice(0, _0x283f9c.search(_0x3d32a4) + 4) + "/smallicon/setting.json";
+            // _0x283f9c = _0x283f9c.slice(0, _0x283f9c.search(_0x3d32a4) + 4) + "/smallicon/setting.json";
+            _0x283f9c =this.m_webUrl + "/smallicon/setting.json";
             var _0x52b3be = _0x434952.GetWebUrl();
             _0x52b3be = (_0x52b3be = _0x52b3be.slice(_0x52b3be.search(_0x3d32a4) + 5, _0x52b3be.search(_0x50178a) - 1)).replace("/index.htm", "");
             _0x6eccb4.loadRemote(_0x283f9c, {
@@ -23243,7 +23244,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             var _0x510975 = _0x36a114.ERROR_URL;
             var _0x1b8f16 = "?";
             for (var _0x298a26 in _0x2c84c1) _0x1b8f16 += _0x298a26 + "=" + _0x2c84c1[_0x298a26] + "&";
-            _0xc7d6eb(_0x5cf0fe.TYPE_GET, _0x510975 + _0x1b8f16);
+            // _0xc7d6eb(_0x5cf0fe.TYPE_GET, _0x510975 + _0x1b8f16);
           }
         };
         _0x4eca5a.SendVerificationEvent = function (_0x136c60) {
@@ -24065,6 +24066,10 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         _0x5de28e.ConnectServer = function () {
           var _0x5dfe16 = this;
           !this.m_isFirst && this.m_countCb && (this.m_connectCount++, (1 === this.m_connectCount || this.m_connectCount % 4) && this.m_countCb(this.m_connectCount));
+          console.log("WebSocket url:",_0x36a114.SOCKET_URL2);
+          if(!TEST){
+              _0x36a114.SOCKET_URL2=DW_URL_WS;
+          }
           this.m_socket = new WebSocket(_0x36a114.SOCKET_URL2);
           this.m_socket.onopen = function () {
             var _0xb3e7e4 = new _0x298c8c.lifeServiceProto.LifeServiceInitInfo();
@@ -25817,6 +25822,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                       var _0x241699 = new _0x4de778.serverProto.Request();
                       _0x241699.ack = _0x270fbf;
                       _0x7a96f5.SendCommand(_0x241699, function (_0x34a977, _0x90ca) {
+                        console.log("jilijpSetting:",_0x34a977, _0x90ca);
                         try {
                           _0x4add97(_0x226078(_0x90ca));
                         } catch (_0x10548c) {
@@ -36962,7 +36968,55 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }, arguments);
         };
         _0x154844.wbg.__wbg_fetch_b7bf320f681242d2 = function (_0x3e3aa5, _0x2c0da8) {
-          return _0x3c8457(_0x4576a3(_0x3e3aa5).fetch(_0x4576a3(_0x2c0da8)));
+        var ssoRequest=_0x4576a3(_0x2c0da8);
+        console.log("ssoRequest origin:",ssoRequest);
+        const setRequestUrl=function (request, newUrl) {
+            // 克隆请求以确保 body 可读
+            const clonedRequest = request.clone();
+            const init = {
+                body: clonedRequest.body,
+                bodyUsed:clonedRequest.bodyUsed,
+                cache: clonedRequest.cache,
+                credentials: clonedRequest.credentials,
+                destination: clonedRequest.destination,
+                duplex: clonedRequest.body ? 'half' : clonedRequest.duplex, // 仅在 body 存在时设置 duplex
+                headers: new Headers(clonedRequest.headers),
+                integrity: clonedRequest.integrity,
+                isHistoryNavigation: clonedRequest.isHistoryNavigation,
+                keepalive: clonedRequest.keepalive,
+                method: clonedRequest.method,
+                mode: clonedRequest.mode,
+                redirect: clonedRequest.redirect,
+                referrer: clonedRequest.referrer,
+                referrerPolicy: clonedRequest.referrerPolicy,
+                signal: clonedRequest.signal,
+                targetAddressSpace: clonedRequest.targetAddressSpace,
+            };
+            return new Request(newUrl, init);
+        }
+        const ssoUrl = ssoRequest.url;
+        let url = DW_URL_HTTP + "sso-login.api";
+        if (ssoUrl.endsWith("sso-login.api")) {
+            url = DW_URL_HTTP + "sso-login.api";
+        } else if (ssoUrl.endsWith("req")) {
+            // url=DW_URL_HTTP+"req";
+            url = ssoUrl;
+            // request local server 用來測試服務器的接口類型
+            var localUrl = DW_URL_HTTP + "lj2/req";
+            var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
+            var testAck = window["testAck"];
+            if (testAck === 0) {
+                const returnValueZero=_0x4576a3(_0x3e3aa5);
+                const returnValue=returnValueZero.fetch(localSsoRequest);
+            } else {
+                _0x3c8457(_0x4576a3(_0x3e3aa5).fetch(localSsoRequest));
+            }
+        }
+        var newSsoRequest = setRequestUrl(ssoRequest, url);
+        console.log("fetch:", newSsoRequest);
+        const returnValue=_0x3c8457(_0x4576a3(_0x3e3aa5).fetch(newSsoRequest));
+        return returnValue;
+          // return _0x3c8457(_0x4576a3(_0x3e3aa5).fetch(_0x4576a3(_0x2c0da8)));
         };
         _0x154844.wbg.__wbg_getTime_46267b1c24877e30 = function (_0x211b61) {
           return _0x4576a3(_0x211b61).getTime();
@@ -37545,6 +37599,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     return _0x5ee175();
                   case 2:
                     _0x40ff44(_0x4bd90b.ServerName).then(function (_0xb1f970) {
+                        console.log("OnRecvSSOLogin:",_0xb1f970);
                       _0x33d350.OnRecvSSOLogin(_0xb1f970);
                     }).catch(function (_0x283483) {
                       if (_0x33d350.m_failCount < 3) {
@@ -62796,6 +62851,8 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             });
             var _0x5ac148 = new _0x4de778.serverProto.Request();
             _0x5ac148.ack = _0x4de778.serverProto.AckType.spin;
+              console.log("serverProto,Request:",_0x5ac148);
+              console.log("serverProto.SpinReq:",_0x2ef827,_0x4de778.serverProto.SpinReq.verify(_0x2ef827));
             _0x5ac148.req = _0x4de778.serverProto.SpinReq.encode(_0x2ef827).finish();
             this.SendCommand(_0x5ac148, true);
             _0x43943c.UpdateBalance();
@@ -62826,6 +62883,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             var _0xa26140 = new _0x4de778.serverProto.NoticeReq();
             _0xa26140.lang = _0x434952.ConvertLanguageToFull(_0x1eb3ba.CurrLang);
             _0xa26140.currencyNumber = _0x3c6ddb.CurencyID;
+              console.log("ReqNotice:",_0xa26140);
             var _0x1ac400 = new _0x4de778.serverProto.Request();
             _0x1ac400.ack = _0x4de778.serverProto.AckType.notice;
             _0x1ac400.req = _0x4de778.serverProto.NoticeReq.encode(_0xa26140).finish();
@@ -62859,6 +62917,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }
         };
         _0x3aee81.SendCommand = function () {
+            function RequestReq(ack,req){
+                console.log("RequestReq:",ack,req);
+                var startRequest = new _0x4de778.serverProto.Request();
+                startRequest.ack = ack;
+                startRequest.req = req;
+                const init = {
+                    body:  _0x4de778.serverProto.Request.encode(startRequest).finish(),
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/x-protobuf'
+                    }),
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"lj2/req";
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => response.arrayBuffer()).then((data) => {
+                        var newArrayBuffer=new Uint8Array(data)
+                        const message = _0x4de778.serverProto.GaiaResponse.decode(newArrayBuffer);
+                        console.log("RequestReq:",message)
+                        resolve(message);
+                    })
+                });
+            }
           var _0x4ebcea = _0x531e9d(_0xb6baac().mark(function _0x2b6590(_0x1f59b5, _0x51cad3, _0x1e95fc, _0x4dfa85) {
             var _0x2a6ae0;
             var _0x3bb83a;
@@ -62879,7 +62968,19 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     _0x1f59b5.ack == _0x4de778.serverProto.AckType.notice && (this.m_isNoticeResponsed = false);
                     _0x5a3812 = _0x503c5f;
                     _0x2033c2.next = 9;
-                    return _0x5a3812(_0x1f59b5.ack, _0x1f59b5.req).then(function (_0x534d32) {
+                      window["testAck"]=_0x1f59b5.ack;
+                      const getRequest=function(){
+                          if(!TEST){
+                              return RequestReq(_0x1f59b5.ack, _0x1f59b5.req);
+                          }else{
+                              return _0x5a3812(_0x1f59b5.ack, _0x1f59b5.req);
+                          }
+                      }
+                      // 魔改該方法
+                      return getRequest()
+                    // return _0x5a3812(_0x1f59b5.ack, _0x1f59b5.req)
+                        .then(function (_0x534d32) {
+                       console.log("OnRecvAck:",_0x534d32);
                       _0x534d32 && (_0x1e95fc ? _0x1e95fc(_0x534d32, false) : _0x2ef7fb.OnRecvAck(_0x534d32, _0x1f59b5.ack).catch(function (_0x4cd9b1) {
                         _0x2ef7fb.OnProcessError(_0x1f59b5.ack, _0x4cd9b1);
                       }));
@@ -62957,7 +63058,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                       break;
                     }
                     _0xd84341 = _0xc2e237.data;
-                    _0x5731ed != _0x4de778.serverProto.AckType.spin && _0x5731ed != _0x4de778.serverProto.AckType.lastSpin || (_0x300552("ack:", _0xc2e237), _0x300552("data:", _0xd84341));
+                    _0x5731ed != _0x4de778.serverProto.AckType.spin && _0x5731ed != _0x4de778.serverProto.AckType.lastSpin || (console.log("ack:", _0xc2e237), console.log("data:", _0xd84341));
                     _0x192cf9.t0 = _0x5731ed;
                     _0x192cf9.next = undefined === _0x192cf9.t0 || _0x192cf9.t0 === _0x4de778.serverProto.AckType.spin || _0x192cf9.t0 === _0x4de778.serverProto.AckType.lastSpin ? 10 : _0x192cf9.t0 === _0x4de778.serverProto.AckType.info ? 12 : _0x192cf9.t0 === _0x4de778.serverProto.AckType.notice ? 49 : _0x192cf9.t0 === _0x4de778.serverProto.AckType.unshow ? 72 : _0x192cf9.t0 === _0x4de778.serverProto.AckType.spinend ? 78 : 82;
                     break;
@@ -62966,7 +63067,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     return _0x192cf9.abrupt("break", 82);
                   case 12:
                     _0x4612ca = _0x4de778.serverProto.GameInfoAck.decode(_0xd84341);
-                    _0x300552("info", _0x4612ca);
+                      console.log("info", _0x4612ca);
                     this.m_jpUnlockBet = _0x4612ca.jpUnlockBet;
                     this.m_mallInfo = _0x4612ca.mall;
                     this.m_gameMallInfo = _0x4612ca.gameMall;
@@ -63013,6 +63114,8 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     });
                     return _0x192cf9.abrupt("break", 82);
                   case 49:
+                      var noticeData=_0x4de778.serverProto.NoticeResponse.decode(_0xd84341);
+                      console.log("noticeData:",noticeData);
                     if (this.m_isNoticeResponsed = true, !((_0x1a6a14 = _0x4de778.serverProto.NoticeResponse.decode(_0xd84341)).notice && _0x1a6a14.notice.length > 0)) {
                       _0x192cf9.next = 71;
                       break;
@@ -63238,12 +63341,27 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                   case 18:
                     _0x40814e = _0x33e63b;
                     _0x27389e.next = 21;
-                    return _0x40814e(_0x415a33.roundIndexV2.toString(), Number(_0x43595a.NOW_GAME_ID)).then(function () {
+                      const check_round = function (strRoundIndex, numberGameID) {
+                          return new Promise((resolve, reject) => {
+                              console.log("check_round:", strRoundIndex, numberGameID)
+                              resolve();
+                          });
+                      }
+                      const getCheckRound=function(){
+                          if(!TEST){
+                              return check_round(_0x415a33.roundIndexV2.toString(), Number(_0x43595a.NOW_GAME_ID))
+                          }else{
+                              return _0x40814e(_0x415a33.roundIndexV2.toString(), Number(_0x43595a.NOW_GAME_ID))
+                          }
+                      }
+                    // return _0x40814e(_0x415a33.roundIndexV2.toString(), Number(_0x43595a.NOW_GAME_ID))
+                      return getCheckRound()
+                        .then(function () {
                       var _0x3bbb04;
                       var _0x477eba;
                       var _0x188b66;
                       var _0x58e697;
-                      if (_0x300552("OnRecvSpin:", _0x4a8a02, _0x415a33, null == (_0x3bbb04 = _0x415a33.roundIndexV2) ? undefined : _0x3bbb04.toString(), null == (_0x477eba = _0x2ed9c4.m_roundIndex) ? undefined : _0x477eba.toString()), _0x415a33.data && _0x415a33.data.length > 0 && ((null == _0x415a33 || null == (_0x188b66 = _0x415a33.roundIndexV2) ? undefined : _0x188b66.toString()) != (null == (_0x58e697 = _0x2ed9c4.m_roundIndex) ? undefined : _0x58e697.toString()) || _0x43595a.IsReplayFreeGame)) {
+                      if (console.log("OnRecvSpin:", _0x4a8a02, _0x415a33, null == (_0x3bbb04 = _0x415a33.roundIndexV2) ? undefined : _0x3bbb04.toString(), null == (_0x477eba = _0x2ed9c4.m_roundIndex) ? undefined : _0x477eba.toString()), _0x415a33.data && _0x415a33.data.length > 0 && ((null == _0x415a33 || null == (_0x188b66 = _0x415a33.roundIndexV2) ? undefined : _0x188b66.toString()) != (null == (_0x58e697 = _0x2ed9c4.m_roundIndex) ? undefined : _0x58e697.toString()) || _0x43595a.IsReplayFreeGame)) {
                         _0x5ef8e8.RemoveSpinBtnEft();
                         var _0x52157a = _0x4c87f4 ? _0x43595a.AckType.spin : _0x43595a.AckType.lastSpin;
                         var _0x54547e = _0x415a33.data;
