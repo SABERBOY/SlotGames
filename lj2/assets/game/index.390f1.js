@@ -8794,6 +8794,7 @@ System.register(
                     e.data = n;
                     var t = new d();
                     (t.reqData = _.lj2Proto.GemInfo.encode(e).finish()),
+                        (console.log("CheckAndSend:",t,e))
                       (t.info = { D: 102 }),
                       v.SendGameCustomizedCommand(t, 102, function (n, e) {});
                   }),
