@@ -8,11 +8,11 @@ clean:
 build:
 	# make clean
 	python Test.py --build
-.PHONY: build:
+.PHONY: build
 
 download:
 	python Test.py --download
-.PHONY: download:
+.PHONY: download
 
 convert:
 	python Test.py --convert
