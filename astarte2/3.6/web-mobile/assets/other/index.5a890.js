@@ -37598,6 +37598,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         };
         var _0x3ab945 = _0x4bd90b.prototype;
         _0x3ab945.ASSOLogin = function () {
+            function RequestFetchLogin(serverName,ssoKey){
+                console.log("RequestFetchLogin:",serverName,ssoKey);
+                // 准备请求参数
+                const init = {
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                    }),
+                    body:  "key="+ssoKey+"&lang=en-US"+"&gameName="+serverName,
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"/sso-login.api";
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                // return  fetch(request);
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => {
+                        console.log("RequestFetchLogin:",response);
+                        if (!response.ok) {
+                            reject(new Error('网络响应不正常，状态码: ' + response.status));
+                        }
+                        resolve(response.json());
+                    })
+                });
+            }
           var _0x31478c = _0x531e9d(_0xb6baac().mark(function _0x1a8be0(_0x182e6d) {
             var _0x33d350 = this;
             return _0xb6baac().wrap(function (_0x3cfed3) {
@@ -37607,7 +37638,9 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     _0x3cfed3.next = 2;
                     return _0x5ee175();
                   case 2:
-                    _0x40ff44(_0x4bd90b.ServerName).then(function (_0xb1f970) {
+                      RequestFetchLogin(_0x4bd90b.ServerName,_0x182e6d)
+                    // _0x40ff44(_0x4bd90b.ServerName)
+                        .then(function (_0xb1f970) {
                         console.log("OnRecvSSOLogin:",_0xb1f970);
                       _0x33d350.OnRecvSSOLogin(_0xb1f970);
                     }).catch(function (_0x283483) {
