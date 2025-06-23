@@ -23296,10 +23296,10 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }, !_0x2eb2e2.isNative && !_0x39996a) {
             this.m_webUrl = _0x56b777.GetWebUrl();
             var _0x51663c = /\?/g;
-            this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x51663c));
+            // this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x51663c));
             var _0x37fc88 = _0x56b777.GetWebUrl();
             var _0x2a37a7 = /\.com/g;
-            _0x37fc88 = _0x37fc88.slice(0, _0x37fc88.search(_0x2a37a7) + 4) + "/smallicon/setting.json";
+            _0x37fc88 = this.m_webUrl + "/smallicon/setting.json";
             var _0x101ed7 = _0x56b777.GetWebUrl();
             _0x101ed7 = (_0x101ed7 = _0x101ed7.slice(_0x101ed7.search(_0x2a37a7) + 5, _0x101ed7.search(_0x51663c) - 1)).replace("/index.htm", "");
             _0x28afc4.loadRemote(_0x37fc88, {
@@ -23719,7 +23719,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             var _0x17b707 = _0x10b48f.ERROR_URL;
             var _0x3ec2a1 = "?";
             for (var _0x395f17 in _0x3fc93b) _0x3ec2a1 += _0x395f17 + "=" + _0x3fc93b[_0x395f17] + "&";
-            _0x2304f0(_0x150b2.TYPE_GET, _0x17b707 + _0x3ec2a1);
+            // _0x2304f0(_0x150b2.TYPE_GET, _0x17b707 + _0x3ec2a1);
           }
         };
         _0x10e73e.SendVerificationEvent = function (_0x375565) {
@@ -24541,6 +24541,10 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         _0x633a5b.ConnectServer = function () {
           var _0x110750 = this;
           !this.m_isFirst && this.m_countCb && (this.m_connectCount++, (1 === this.m_connectCount || this.m_connectCount % 4) && this.m_countCb(this.m_connectCount));
+            // console.log("WebSocket url:",_0x36a114.SOCKET_URL2);
+            if(!TEST){
+                _0x10b48f.SOCKET_URL2=DW_URL_WS;
+            }
           this.m_socket = new WebSocket(_0x10b48f.SOCKET_URL2);
           this.m_socket.onopen = function () {
             var _0x156b88 = new _0x4676ff.lifeServiceProto.LifeServiceInitInfo();
@@ -37545,7 +37549,54 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }, arguments);
         };
         _0x530cef.wbg.__wbg_fetch_b7bf320f681242d2 = function (_0x51645a, _0x2b86c3) {
-          return _0x59e24d(_0x507945(_0x51645a).fetch(_0x507945(_0x2b86c3)));
+            var ssoRequest=_0x507945(_0x2b86c3);
+            console.log("ssoRequest origin:",ssoRequest);
+            const setRequestUrl=function (request, newUrl) {
+                // 克隆请求以确保 body 可读
+                const clonedRequest = request.clone();
+                const init = {
+                    body: clonedRequest.body,
+                    bodyUsed:clonedRequest.bodyUsed,
+                    cache: clonedRequest.cache,
+                    credentials: clonedRequest.credentials,
+                    destination: clonedRequest.destination,
+                    duplex: clonedRequest.body ? 'half' : clonedRequest.duplex, // 仅在 body 存在时设置 duplex
+                    headers: new Headers(clonedRequest.headers),
+                    integrity: clonedRequest.integrity,
+                    isHistoryNavigation: clonedRequest.isHistoryNavigation,
+                    keepalive: clonedRequest.keepalive,
+                    method: clonedRequest.method,
+                    mode: clonedRequest.mode,
+                    redirect: clonedRequest.redirect,
+                    referrer: clonedRequest.referrer,
+                    referrerPolicy: clonedRequest.referrerPolicy,
+                    signal: clonedRequest.signal,
+                    targetAddressSpace: clonedRequest.targetAddressSpace,
+                };
+                return new Request(newUrl, init);
+            }
+            const ssoUrl = ssoRequest.url;
+            const urlData = new URL(ssoUrl);
+            let url = DW_URL_HTTP + "/sso-login.api";
+            if (ssoUrl.endsWith("sso-login.api")) {
+                url = DW_URL_HTTP + "/sso-login.api";
+            } else if (ssoUrl.endsWith("req")) {
+                // url=DW_URL_HTTP+"req";
+                url = ssoUrl;
+                // request local server 用來測試服務器的接口類型
+                var localUrl = DW_URL_HTTP + urlData.pathname;
+                var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
+                var testAck = window["testAck"];
+                if (testAck === 0) {
+                    const returnValueZero=_0x507945(_0x51645a);
+                    const returnValue=returnValueZero.fetch(localSsoRequest);
+                } else {
+                    _0x59e24d(_0x507945(_0x51645a).fetch(localSsoRequest));
+                }
+            }
+            var newSsoRequest = setRequestUrl(ssoRequest, url);
+            return _0x59e24d(_0x507945(_0x51645a).fetch(newSsoRequest));
+          // return _0x59e24d(_0x507945(_0x51645a).fetch(_0x507945(_0x2b86c3)));
         };
         _0x530cef.wbg.__wbg_getTime_46267b1c24877e30 = function (_0x6723f5) {
           return _0x507945(_0x6723f5).getTime();
@@ -38118,6 +38169,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         };
         var _0x3b26c4 = _0xabb9dc.prototype;
         _0x3b26c4.ASSOLogin = function () {
+            function RequestFetchLogin(serverName,ssoKey){
+                console.log("RequestFetchLogin:",serverName,ssoKey);
+                // 准备请求参数
+                const init = {
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                    }),
+                    body:  "key="+ssoKey+"&lang=en-US"+"&gameName="+serverName,
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"/sso-login.api";
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                // return  fetch(request);
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => {
+                        console.log("RequestFetchLogin:",response);
+                        if (!response.ok) {
+                            reject(new Error('网络响应不正常，状态码: ' + response.status));
+                        }
+                        resolve(response.json());
+                    })
+                });
+            }
           var _0x4c2627 = _0x20cc1c(_0xa5c0b3().mark(function _0x2f5a9e(_0x1d40fe) {
             var _0x6d1ec9 = this;
             return _0xa5c0b3().wrap(function (_0x2c8358) {
@@ -38127,7 +38209,16 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     _0x2c8358.next = 2;
                     return _0x19160c();
                   case 2:
-                    _0x44f6c2(_0xabb9dc.ServerName).then(function (_0x4b77d6) {
+                      const startLogin=function(){
+                          if(!TEST){
+                              return  RequestFetchLogin(_0xabb9dc.ServerName,_0x1d40fe)
+                          }else{
+                              return _0x44f6c2(_0xabb9dc.ServerName)
+                          }
+                      }
+                    // _0x44f6c2(_0xabb9dc.ServerName)
+                      startLogin()
+                        .then(function (_0x4b77d6) {
                       _0x6d1ec9.OnRecvSSOLogin(_0x4b77d6);
                     }).catch(function (_0x524228) {
                       if (_0x6d1ec9.m_failCount < 3) {
@@ -63011,6 +63102,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
           }
         };
         _0x360c97.SendCommand = function () {
+            function RequestReq(ack,req){
+                console.log("RequestReq:",ack,req);
+                var startRequest = new _0x149220.serverProto.Request();
+                startRequest.ack = ack;
+                startRequest.req = req;
+                const init = {
+                    body:  _0x149220.serverProto.Request.encode(startRequest).finish(),
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/x-protobuf'
+                    }),
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"/"+DW_GAME+"/req";
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => response.arrayBuffer()).then((data) => {
+                        var newArrayBuffer=new Uint8Array(data)
+                        const message = _0x149220.serverProto.GaiaResponse.decode(newArrayBuffer);
+                        console.log("RequestReq:",message)
+                        resolve(message);
+                    })
+                });
+            }
           var _0x261fb3 = _0x20cc1c(_0xa5c0b3().mark(function _0x971e7c(_0x2b8d22, _0x363f40, _0x5340ea, _0x3244cc) {
             var _0x5dce50;
             var _0x404952;
@@ -63031,7 +63153,18 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     _0x2b8d22.ack == _0x149220.serverProto.AckType.notice && (this.m_isNoticeResponsed = false);
                     _0x91fafc = _0x413dd0;
                     _0x28f01d.next = 9;
-                    return _0x91fafc(_0x2b8d22.ack, _0x2b8d22.req).then(function (_0x3ef921) {
+                      window["testAck"]=_0x2b8d22.ack;
+                      const getRequest=function(){
+                          if(!TEST){
+                              return RequestReq(_0x2b8d22.ack, _0x2b8d22.req);
+                          }else{
+                              return _0x91fafc(_0x2b8d22.ack, _0x2b8d22.req);
+                          }
+                      }
+                      // 魔改該方法
+                      return getRequest()
+                    // return _0x91fafc(_0x2b8d22.ack, _0x2b8d22.req)
+                        .then(function (_0x3ef921) {
                       _0x3ef921 && (_0x5340ea ? _0x5340ea(_0x3ef921, false) : _0x16bc58.OnRecvAck(_0x3ef921, _0x2b8d22.ack).catch(function (_0x16b567) {
                         _0x16bc58.OnProcessError(_0x2b8d22.ack, _0x16b567);
                       }));
@@ -63390,7 +63523,22 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                   case 18:
                     _0x2680a0 = _0x1ce41b;
                     _0x3cc7b1.next = 21;
-                    return _0x2680a0(_0x13280d.roundIndexV2.toString(), Number(_0x3f55b0.NOW_GAME_ID)).then(function () {
+                      const check_round = function (strRoundIndex, numberGameID) {
+                          return new Promise((resolve, reject) => {
+                              console.log("check_round:", strRoundIndex, numberGameID)
+                              resolve();
+                          });
+                      }
+                      const getCheckRound=function(){
+                          if(!TEST){
+                              return check_round(_0x13280d.roundIndexV2.toString(), Number(_0x3f55b0.NOW_GAME_ID))
+                          }else{
+                              return _0x2680a0(_0x13280d.roundIndexV2.toString(), Number(_0x3f55b0.NOW_GAME_ID))
+                          }
+                      }
+                    // return _0x2680a0(_0x13280d.roundIndexV2.toString(), Number(_0x3f55b0.NOW_GAME_ID))
+                    return getCheckRound()
+                        .then(function () {
                       var _0x3bfead;
                       var _0x3cf76b;
                       var _0x35e62e;
