@@ -221,7 +221,7 @@ def build_all():
     # 添加並轉換文件(png->astc)
     convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
     # 解码 JavaScript 文件
-#     decode_index_js_files()
+    decode_index_js_files()
     pass
 
 
