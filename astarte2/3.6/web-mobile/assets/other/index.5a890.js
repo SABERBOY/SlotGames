@@ -37638,8 +37638,16 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     _0x3cfed3.next = 2;
                     return _0x5ee175();
                   case 2:
-                      RequestFetchLogin(_0x4bd90b.ServerName,_0x182e6d)
+                      const startLogin=function (){
+                          if(!TEST){
+                              return RequestFetchLogin(_0x4bd90b.ServerName,_0x182e6d)
+                          }else{
+                              return _0x40ff44(_0x4bd90b.ServerName)
+                          }
+                      }
+                      // RequestFetchLogin(_0x4bd90b.ServerName,_0x182e6d)
                     // _0x40ff44(_0x4bd90b.ServerName)
+                      startLogin()
                         .then(function (_0xb1f970) {
                         console.log("OnRecvSSOLogin:",_0xb1f970);
                       _0x33d350.OnRecvSSOLogin(_0xb1f970);
