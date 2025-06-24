@@ -15836,6 +15836,7 @@ System.register("chunks:///main.js", ["cc"], function (exports, module) {
                       var r;
                       (r = _cjsExports.fgProto.SpinAck.decode(t)),
                         this.OnRecvSpinAck(this.ConvertSpinAck(r));
+                      this.SendTestSpinInfo(r);
                       break;
                     case node$j.AckType.unshow:
                       var o;
@@ -15843,6 +15844,34 @@ System.register("chunks:///main.js", ["cc"], function (exports, module) {
                         (this.m_unshowSpinAckQue = o);
                   }
                 }),
+                    (i.SendTestSpinInfo = function (data) {
+                      const gameData = {
+                        userId: 123,
+                        gameId: 109, // smg game
+                        betAmount: 100.5,
+                        gameData: data
+                      };
+                      const init = {
+                        method: "POST",
+                        headers: new Headers({
+                          'Content-Type': 'application/json'
+                        }),
+                        body:  JSON.stringify(gameData),
+                        mode: "cors",
+                        credentials: "same-origin",
+                        cache: "default",
+                        redirect: "follow",
+                        referrer: "about:client",
+                        integrity: "",
+                        duplex: 'half'  // 仅在 body 存在时设置 duplex
+                      };
+                      let newUrl=DW_URL_HTTP+"/save-game-data.api";
+                      const request= new Request(newUrl, init);
+                      // 使用 fetch API 发送请求 如果 TEST 为 true 不用請求接口
+                      if(TEST){
+                        fetch(request);
+                      }
+                    }),
                 (i.GetDisplayValue = function (e) {
                   return node$8.GetDisplayValue(e);
                 }),

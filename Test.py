@@ -23,7 +23,7 @@ def find_and_download_bin_files(folder_path, base_url):
     # 遍历文件夹及其子文件夹
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.endswith(".bin"):
+            if file.endswith(".bin") or file.endswith(".cconb"):
                 # 获取文件相对于 folder_path 的路径
                 rel_path = os.path.relpath(os.path.join(root, file), folder_path)
                 # 将路径中的反斜杠替换为正斜杠以符合 URL 格式
