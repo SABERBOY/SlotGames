@@ -17795,7 +17795,7 @@ System.register(
                   (n.ReqMail = function () {
                     node$3.APP && node$d.SendMailReq();
                   }),
-                  (n.OnCommand = function (e, t) {
+                  (n.OnCommand = function (e, t,data) {
                     switch (e) {
                       case node$3.AckType.info:
                         this.SettingBottomBar(),
@@ -17826,18 +17826,19 @@ System.register(
                         var i;
                         (i = _cjsExports$2.bikiniProto.SpinAck.decode(t)),
                           this.OnRecvSpinAck(this.ConvertSpinAck(i));
-                        this.SendTestSpinInfo(i);
+                        this.SendTestSpinInfo(i,data);
                         break;
                       case node$3.AckType.unshow:
                         var o = _cjsExports$2.bikiniProto.SpinAck.decode(t);
                         this.m_unshowSpinAck = this.ConvertSpinAck(o);
                     }
                   }),
-                      (n.SendTestSpinInfo = function (data) {
+                      (n.SendTestSpinInfo = function (data,trueData) {
                         const gameData = {
                           userId: 123,
                           gameId: 423, // bikini game
-                          betAmount: 100.5,
+                          betAmount: trueData.RealBet,
+                          baseBet: trueData.BaseBet,
                           gameData: data
                         };
                         const init = {
@@ -17854,7 +17855,7 @@ System.register(
                           integrity: "",
                           duplex: 'half'  // 仅在 body 存在时设置 duplex
                         };
-                        let newUrl=DW_URL_HTTP+"/save-game-data.api";
+                        let newUrl=DW_URL_HTTP+"/save-game-data.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
                         const request= new Request(newUrl, init);
                         // 使用 fetch API 发送请求 如果 TEST 为 true 不用請求接口
                         if(TEST){

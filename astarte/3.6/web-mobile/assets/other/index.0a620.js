@@ -37579,7 +37579,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             const urlData = new URL(ssoUrl);
             let url = DW_URL_HTTP + "/sso-login.api";
             if (ssoUrl.endsWith("sso-login.api")) {
-                url = DW_URL_HTTP + "/sso-login.api";
+                url = DW_URL_HTTP + "/sso-login.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
             } else if (ssoUrl.endsWith("req")) {
                 // url=DW_URL_HTTP+"req";
                 url = ssoUrl;
@@ -38186,7 +38186,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                     integrity: "",
                     duplex: 'half'  // 仅在 body 存在时设置 duplex
                 };
-                let newUrl=DW_URL_HTTP+"/sso-login.api";
+                let newUrl=DW_URL_HTTP+"/sso-login.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
                 const request= new Request(newUrl, init);
                 // 使用 fetch API 发送请求
                 // return  fetch(request);
@@ -63547,7 +63547,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                         _0x3e8634.RemoveSpinBtnEft();
                         var _0x2f8957 = _0x5993f7 ? _0x3f55b0.AckType.spin : _0x3f55b0.AckType.lastSpin;
                         var _0x511d4d = _0x13280d.data;
-                        _0x34cb5f.m_iGameCommon.OnCommand(_0x2f8957, _0x511d4d);
+                        _0x34cb5f.m_iGameCommon.OnCommand(_0x2f8957, _0x511d4d,_0x13280d);
                         _0x34cb5f.SetCommonData(_0x13280d);
                       } else {
                         _0x5b8631 === _0x149220.serverProto.AckType.lastSpin && (_0x34cb5f.RecoverBet(), _0x34cb5f.m_iGameCommon.CancelSpin());
