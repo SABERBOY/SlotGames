@@ -93,6 +93,7 @@ System.register([], function (_export, _context) {
                         enabled: false,
                       },
                     },
+                    debugMode: 1,
                   })
                   .then(function () {
                     if (cc.sys.isBrowser) {
