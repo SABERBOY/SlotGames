@@ -10,8 +10,8 @@ import glob
 import subprocess
 
 # 使用示例
-download_folder_path = "lj2/assets/game/native"  # 替换为你的本地文件夹路径
-download_base_url = "https://casino-wbgame.tadagaming.com/lj2/assets/game/native/"
+download_folder_path = "fgp/assets/game/native"  # 替换为你的本地文件夹路径
+download_base_url = "https://casino-wbgame.tadagaming.com/fgp/assets/game/native/"
 
 
 def find_and_download_bin_files(folder_path, base_url):
@@ -23,7 +23,7 @@ def find_and_download_bin_files(folder_path, base_url):
     # 遍历文件夹及其子文件夹
     for root, dirs, files in os.walk(folder_path):
         for file in files:
-            if file.endswith(".bin"):
+            if file.endswith(".bin") or file.endswith(".cconb"):
                 # 获取文件相对于 folder_path 的路径
                 rel_path = os.path.relpath(os.path.join(root, file), folder_path)
                 # 将路径中的反斜杠替换为正斜杠以符合 URL 格式
@@ -220,6 +220,8 @@ def build_all():
     find_and_download_bin_files(download_folder_path, download_base_url)
     # 添加並轉換文件(png->astc)
     convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+    # 解码 JavaScript 文件
+#     decode_index_js_files()
     pass
 
 
