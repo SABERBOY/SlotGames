@@ -1,12 +1,10 @@
 all:
-	#make clean
 	make build
 
 clean:
 	rm -rf $(GO_OUT_DIR)    
 
 build:
-	# make clean
 	python Test.py --build
 .PHONY: build
 
