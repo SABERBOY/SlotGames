@@ -10,8 +10,8 @@ import glob
 import subprocess
 
 # 使用示例
-download_folder_path = "fgp/assets"  # 替换为你的本地文件夹路径
-download_base_url = "https://casino-wbgame.tadagaming.com/fgp/assets/"
+download_folder_path = "ols2/assets"  # 替换为你的本地文件夹路径
+download_base_url = "https://casino-wbgame.tadagaming.com/ols2/assets/"
 
 
 def find_and_download_bin_files(folder_path, base_url):
@@ -127,8 +127,8 @@ def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
                         "-cl",  # 压缩模式
                         png_file,  # 输入文件（PNG）
                         astc_file,  # 输出文件（ASTC）
-                        "4x4",  # 块大小
-                        "-fast",  # 压缩质量（快速模式）
+                        "6x6",  # 块大小
+                        "-medium",  # 压缩质量（快速模式）
                     ]
                     result = subprocess.run(
                         cmd, capture_output=True, text=True, check=True
