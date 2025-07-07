@@ -8,10 +8,12 @@ from urllib.parse import quote
 from pathlib import Path
 import glob
 import subprocess
+import platform
 
 # 使用示例
-download_folder_path = "fgp/assets"  # 替换为你的本地文件夹路径
-download_base_url = "https://casino-wbgame.tadagaming.com/fgp/assets/"
+download_folder_path = "fg3/assets"  # 替换为你的本地文件夹路径
+download_base_url = "https://casino-wbgame.tadagaming.com/fg3/assets/"
+download_origin_url = "https://casino-wbgame.tadagaming.com/"
 
 
 def find_and_download_bin_files(folder_path, base_url):
@@ -89,66 +91,60 @@ def convert_webp_to_png(webp_file, png_file):
         return False
 
 
-def convert_webp_to_astc(folder_path, astcenc_path="astcenc-avx2"):
+def download_asset_files(folder_path, download_base_url):
     """
-    查找文件夹中的所有 .webp 文件，转换为 .png 后再转换为 .astc 文件
-    参数:
-        folder_path: 本地文件夹路径
-        astcenc_path: astcenc 工具的路径或命令
+    Windows: 遍历webp，下载远程astc。
+    Mac: 遍历astc，下载远程webp。
     """
-    # 确保文件夹存在
-    if not os.path.exists(folder_path):
-        print(f"文件夹 {folder_path} 不存在")
-        return
-
-    # 遍历文件夹及其子文件夹
-    for root, dirs, files in os.walk(folder_path):
-        for file in files:
-            if file.endswith(".webp"):
-                # 获取文件的完整路径
-                webp_file = os.path.join(root, file)
-                # 生成中间 .png 文件路径
-                png_file = os.path.splitext(webp_file)[0] + ".png"
-                # 生成输出 .astc 文件路径
-                astc_file = os.path.splitext(webp_file)[0] + ".astc"
-
-                print(f"正在处理文件: {webp_file}")
-
-                # Step 1: 将 .webp 转换为 .png
-                if not convert_webp_to_png(webp_file, png_file):
-                    continue  # 如果转换失败，跳过此文件
-
-                # Step 2: 使用 astcenc 将 .png 转换为 .astc
-                try:
-                    # 运行 astcenc 命令
-                    # 示例: astcenc-avx2 -cl input.png output.astc 4x4 -fast
-                    cmd = [
-                        astcenc_path,
-                        "-cl",  # 压缩模式
-                        png_file,  # 输入文件（PNG）
-                        astc_file,  # 输出文件（ASTC）
-                        "4x4",  # 块大小
-                        "-fast",  # 压缩质量（快速模式）
-                    ]
-                    result = subprocess.run(
-                        cmd, capture_output=True, text=True, check=True
-                    )
-                    print(f"成功转换: {webp_file} -> {astc_file}")
-
-                    # 可选：删除中间生成的 .png 文件
+    sys_platform = platform.system().lower()
+    if sys_platform.startswith("win"):
+        # Windows: webp -> astc
+        for root, dirs, files in os.walk(folder_path):
+            for file in files:
+                if file.endswith(".webp"):
+                    webp_file = os.path.join(root, file)
+                    rel_path = os.path.relpath(webp_file, folder_path)
+                    astc_rel_path = rel_path[:-5] + ".astc"
+                    astc_url = download_base_url + astc_rel_path.replace(os.sep, "/")
+                    local_astc_file = os.path.join(root, os.path.splitext(file)[0] + ".astc")
+                    print(f"[Windows] 正在下载: {astc_url} -> {local_astc_file}")
                     try:
-                        os.remove(png_file)
-                        print(f"已删除中间文件: {png_file}")
+                        response = requests.get(astc_url, stream=True)
+                        if response.status_code == 200:
+                            with open(local_astc_file, "wb") as f:
+                                for chunk in response.iter_content(chunk_size=8192):
+                                    if chunk:
+                                        f.write(chunk)
+                            print(f"下载成功: {local_astc_file}")
+                        else:
+                            print(f"下载失败，状态码: {response.status_code}，URL: {astc_url}")
                     except Exception as e:
-                        print(f"删除中间文件 {png_file} 失败: {str(e)}")
-
-                except subprocess.CalledProcessError as e:
-                    print(f"转换文件 {png_file} 到 ASTC 失败: {e.stderr}")
-                except FileNotFoundError:
-                    print(f"astcenc 工具未找到，请确保 {astcenc_path} 已安装并配置正确")
-                    return
-                except Exception as e:
-                    print(f"处理文件 {webp_file} 时出错: {str(e)}")
+                        print(f"下载 {astc_url} 时出错: {str(e)}")
+    elif sys_platform == "darwin":
+        # Mac: astc -> webp
+        for root, dirs, files in os.walk(folder_path):
+            for file in files:
+                if file.endswith(".astc"):
+                    astc_file = os.path.join(root, file)
+                    rel_path = os.path.relpath(astc_file, folder_path)
+                    webp_rel_path = rel_path[:-5] + ".webp"
+                    webp_url = download_base_url + webp_rel_path.replace(os.sep, "/")
+                    local_webp_file = os.path.join(root, os.path.splitext(file)[0] + ".webp")
+                    print(f"[Mac] 正在下载: {webp_url} -> {local_webp_file}")
+                    try:
+                        response = requests.get(webp_url, stream=True)
+                        if response.status_code == 200:
+                            with open(local_webp_file, "wb") as f:
+                                for chunk in response.iter_content(chunk_size=8192):
+                                    if chunk:
+                                        f.write(chunk)
+                            print(f"下载成功: {local_webp_file}")
+                        else:
+                            print(f"下载失败，状态码: {response.status_code}，URL: {webp_url}")
+                    except Exception as e:
+                        print(f"下载 {webp_url} 时出错: {str(e)}")
+    else:
+        print(f"不支持的平台: {sys_platform}")
 
 
 # 使用示例
@@ -219,9 +215,9 @@ def build_all():
     # 下載缺失的文件
     find_and_download_bin_files(download_folder_path, download_base_url)
     # 添加並轉換文件(png->astc)
-    convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+    download_asset_files(convert_folder_path, download_origin_url)
     # 解码 JavaScript 文件
-#     decode_index_js_files()
+    #     decode_index_js_files()
     pass
 
 
@@ -249,6 +245,6 @@ if __name__ == "__main__":
     if args.download:
         find_and_download_bin_files(download_folder_path, download_base_url)
     if args.convert:
-        convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
+        download_asset_files(convert_folder_path, download_origin_url)
     if args.decode:
         decode_index_js_files()

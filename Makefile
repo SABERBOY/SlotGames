@@ -5,20 +5,24 @@ clean:
 	rm -rf $(GO_OUT_DIR)    
 
 build:
-	python Test.py --build
+	python3 Test.py --build
 .PHONY: build
 
 download:
-	python Test.py --download
+	python3 Test.py --download
 .PHONY: download
 
 convert:
-	python Test.py --convert
+	python3 Test.py --convert
 .PHONY: convert
 
 decode:
-	python Test.py --decode
+	python3 Test.py --decode
 .PHONY: decode
+
+patch:
+	python3 auto_patch.py
+.PHONY: patch
 
 govulncheck:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
