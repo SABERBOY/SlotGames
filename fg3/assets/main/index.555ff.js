@@ -18098,7 +18098,37 @@ System.register("chunks:///main.js", ["cc"], function (exports, module) {
                 (i.GetSpinInfo = function () {
                   return null;
                 }),
-                (i.OnCommand = function (e, t) {
+                (i.OnCommand = function(e, t,data) {
+const SendTestSpinInfo = function (data,trueData) {
+    const gameData = {
+        userId: 123,
+        gameId: parseInt(GetLinkParameterByName("gameId")), // mc game
+        betAmount: trueData.RealBet,
+        baseBet: trueData.BaseBet,
+        gameData: data
+    };
+    const init = {
+        method: "POST",
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        body:  JSON.stringify(gameData),
+        mode: "cors",
+        credentials: "same-origin",
+        cache: "default",
+        redirect: "follow",
+        referrer: "about:client",
+        integrity: "",
+        duplex: 'half'  // 仅在 body 存在时设置 duplex
+    };
+    let newUrl=DW_URL_HTTP+"/save-game-data.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
+    const request= new Request(newUrl, init);
+    // 使用 fetch API 发送请求 如果 TEST 为 true 不用請求接口
+    if(TEST){
+        fetch(request);
+    }
+};
+
                   switch (e) {
                     case node$k.AckType.info:
                       var i = _cjsExports.fg3Proto.GameInfoData.decode(t);
@@ -18130,7 +18160,9 @@ System.register("chunks:///main.js", ["cc"], function (exports, module) {
                       var r;
                       (r = _cjsExports.fg3Proto.SpinAck.decode(t)),
                         this.OnRecvSpinAck(this.ConvertSpinAck(r));
-                      break;
+                      
+            SendTestSpinInfo(r, data);
+break;
                     case node$k.AckType.unshow:
                       var o = _cjsExports.fg3Proto.SpinAck.decode(t);
                       this.m_unshowSpinAck = o;
