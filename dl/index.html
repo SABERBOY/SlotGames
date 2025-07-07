@@ -2,19 +2,13 @@
 <html>
   <head>
     <!-- Google tag (gtag.js) -->
-    <script
+    <!-- <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-MTXM3DWCZJ"
-    ></script>
+    ></script> -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-MTXM3DWCZJ");
-    </script>
+// gtag 代码已注释
+</script>
     <meta charset="utf-8" />
     <title>DevilLock</title>
 
@@ -1377,5 +1371,19 @@
         console.error(err);
       });
     </script>
-  </body>
+  
+<script>
+      const queryStringTest = window.location.search;
+      const urlParamsTest = new URLSearchParams(queryStringTest);
+      const urlParams_getTest = function(name) {
+        return urlParamsTest.get(name) || '';
+      }
+      window["TEST"] = urlParams_getTest('demo') == 'true';
+      window["DW_GAME"] = "dl";
+      // window["DW_URL_HTTP"] = "https://ws-dadaslot.schemefun.com";
+      window["DW_URL_HTTP"] = "https://127.0.0.1:8000";
+      // window["DW_URL_WS"] = "wss://ws-dadaslot.schemefun.com/lifeservice/ws2";
+      window["DW_URL_WS"] = "wss://127.0.0.1:8000/lifeservice/ws2";
+</script>
+</body>
 </html>
