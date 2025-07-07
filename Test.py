@@ -9,9 +9,18 @@ from pathlib import Path
 import glob
 import subprocess
 
+
+game_name = ""
+project_root = Path.cwd()
+for root, dirs, files in os.walk(project_root):
+    if "index.html" in files:
+        game_name = Path(root).name
+        break
+print(f"找到游戏目录: {game_name}")
+
 # 使用示例
-download_folder_path = "ols2/assets"  # 替换为你的本地文件夹路径
-download_base_url = "https://casino-wbgame.tadagaming.com/ols2/assets/"
+download_folder_path = f"{game_name}/assets"  # 替换为你的本地文件夹路径
+download_base_url = f"https://casino-wbgame.tadagaming.com/{game_name}/assets/"
 
 
 def find_and_download_bin_files(folder_path, base_url):
