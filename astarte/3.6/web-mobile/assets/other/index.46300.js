@@ -37593,6 +37593,14 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
                 } else {
                     _0x59e24d(_0x507945(_0x51645a).fetch(localSsoRequest));
                 }
+            }else if (ssoUrl.endsWith("setgem")){
+                url = ssoUrl;
+                var localUrl = DW_URL_HTTP  + urlData.pathname;
+                var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
+                const returnValueZero=_0x507945(_0x51645a);
+                const returnValue=returnValueZero.fetch(localSsoRequest);
+            }else{
+                url = ssoUrl;
             }
             var newSsoRequest = setRequestUrl(ssoRequest, url);
             return _0x59e24d(_0x507945(_0x51645a).fetch(newSsoRequest));
