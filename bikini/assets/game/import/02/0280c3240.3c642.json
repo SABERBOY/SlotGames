@@ -1,0 +1,276 @@
+[
+  1,
+  ["1b7936872@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "String_03",
+          "rect": { "x": 3, "y": 3, "width": 477, "height": 60 },
+          "offset": { "x": -0.5, "y": 1 },
+          "originalSize": { "width": 490, "height": 80 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 482, "y": 69, "width": 147, "height": 26 },
+          "offset": { "x": 0.5, "y": 2 },
+          "originalSize": { "width": 490, "height": 40 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Copliment_01",
+          "rect": { "x": 3, "y": 164, "width": 633, "height": 202 },
+          "offset": { "x": 7, "y": 0 },
+          "originalSize": { "width": 651, "height": 202 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 211, "y": 282, "width": 441, "height": 53 },
+          "offset": { "x": -13.5, "y": 1.5 },
+          "originalSize": { "width": 490, "height": 80 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 421, "y": 282, "width": 321, "height": 53 },
+          "offset": { "x": -0.5, "y": -0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_AddSpins_02",
+          "rect": { "x": 211, "y": 222, "width": 294, "height": 54 },
+          "offset": { "x": 0, "y": -3 },
+          "originalSize": { "width": 320, "height": 60 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 367, "y": 282, "width": 349, "height": 48 },
+          "offset": { "x": -0.5, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_02",
+          "rect": { "x": 3, "y": 69, "width": 473, "height": 89 },
+          "offset": { "x": -2.5, "y": 1.5 },
+          "originalSize": { "width": 490, "height": 110 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Counter_01",
+          "rect": { "x": 270, "y": 722, "width": 94, "height": 76 },
+          "offset": { "x": 0, "y": -6 },
+          "originalSize": { "width": 100, "height": 100 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Copliment_02",
+          "rect": { "x": 270, "y": 282, "width": 434, "height": 91 },
+          "offset": { "x": 0, "y": -4.5 },
+          "originalSize": { "width": 450, "height": 100 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_03",
+            "0fIxl4iuhKf7gkHtqrJdIt@f9941",
+            "String_02",
+            "bdugT4BFBGHbIFN4WluIhh@f9941",
+            "String_00",
+            "160G7d+FhEn6N7RQMWMcTn@f9941",
+            "TXT_FG_Copliment_01",
+            "2eMnECRvxPeLRjlaYptbZM@f9941",
+            "TXT_FG_AddSpins_02",
+            "5fuP85gkpLfYMpaJgIYdtA@f9941",
+            "TXT_FG_AddSpins_01",
+            "ee5C/9Kj1Npby/MMbe1mqt@f9941",
+            "String_01",
+            "38wp//jtJFiL6l/CV3zjj1@f9941",
+            "TXT_FG_Copliment_02",
+            "e6FHa/US1NDYQKUovKD9XW@f9941",
+            "TXT_FG_Counter_01",
+            "e5h2lgIpxFVY1cBNSlYan6@f9941",
+            "txt1",
+            "77dWknC81PDbSNLQBIdTuV@f9941",
+            "txt2",
+            "3b6cLFn1VHYqUVGmP5i863@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_AddSpins_01",
+          "rect": { "x": 211, "y": 164, "width": 244, "height": 49 },
+          "offset": { "x": -1, "y": -0.5 },
+          "originalSize": { "width": 320, "height": 60 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
