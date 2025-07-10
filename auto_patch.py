@@ -60,10 +60,10 @@ def step3_patch_index_html():
       }}
       window["TEST"] = urlParams_getTest('demo') == 'true';
       window["DW_GAME"] = "{parent_folder}";
-      // window["DW_URL_HTTP"] = "https://ws-dadaslot.schemefun.com";
-      window["DW_URL_HTTP"] = "https://127.0.0.1:8000";
-      // window["DW_URL_WS"] = "wss://ws-dadaslot.schemefun.com/lifeservice/ws2";
-      window["DW_URL_WS"] = "wss://127.0.0.1:8000/lifeservice/ws2";
+      window["DW_URL_HTTP"] = "https://ws-dadaslot.schemefun.com";
+      // window["DW_URL_HTTP"] = "https://127.0.0.1:8000";
+      window["DW_URL_WS"] = "wss://ws-dadaslot.schemefun.com/lifeservice/ws2";
+      // window["DW_URL_WS"] = "wss://127.0.0.1:8000/lifeservice/ws2";
 </script>
 '''
             # 简单插入到</body>前
