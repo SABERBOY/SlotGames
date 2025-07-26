@@ -1,0 +1,1722 @@
+[
+  1,
+  [
+    "1c18394cb@6c48a",
+    "1edecdff8@6c48a",
+    "1bf80e82b@6c48a",
+    "99FWNixbhPDoEzgmj+g5nS@f9941",
+    "9fM4Xs3otGuKqLp/kNJDlq@6c48a",
+    "d4r6Fu0CtFlpErgsif3Xl8",
+    "d0MqyYBeFAkIi762QNy1/B@b47c0",
+    "6fAc9/gb9Kfr1dCvwZaWSA@b47c0",
+    "99FWNixbhPDoEzgmj+g5nS@6c48a",
+    "8feYVvNblCE6fbB6J6Pl4I",
+    "7aY6ub/u5OGZX3LShCFnmp@f9941",
+    "fdLQLsW65HRqonAqyTlGS/@f9941",
+    "3di5+3CxxNgqMbQCo4oaBU",
+    "1asuMfnHZLGpegYTQhuxfq"
+  ],
+  [
+    "_textureSource",
+    "node",
+    "_parent",
+    "_cameraComponent",
+    "root",
+    "scene",
+    "spriteFrame",
+    "asset",
+    "_envmapHDR",
+    "_envmapLDR",
+    "m_logoSpriteAtlas",
+    "m_winLabel",
+    "m_spine",
+    "m_spineSkeleton",
+    "data",
+    "_spriteFrame",
+    "_skeletonData",
+    "_font"
+  ],
+  [
+    "cc.SpriteFrame",
+    "cc.ImageAsset",
+    [
+      "cc.Node",
+      [
+        "_name",
+        "_layer",
+        "_id",
+        "_objFlags",
+        "__editorExtras__",
+        "_components",
+        "_children",
+        "_parent",
+        "_prefab",
+        "_lpos",
+        "_lrot",
+        "_euler"
+      ],
+      -2,
+      9,
+      2,
+      1,
+      4,
+      5,
+      5,
+      5
+    ],
+    "cc.Texture2D",
+    [
+      "cc.UITransform",
+      ["node", "_contentSize", "__prefab", "_anchorPoint"],
+      3,
+      1,
+      5,
+      4,
+      5
+    ],
+    [
+      "cc.PrefabInfo",
+      [
+        "fileId",
+        "targetOverrides",
+        "nestedPrefabInstanceRoots",
+        "root",
+        "instance",
+        "asset"
+      ],
+      1,
+      2,
+      1,
+      4,
+      6
+    ],
+    [
+      "cc.Camera",
+      [
+        "_visibility",
+        "_clearFlags",
+        "_projection",
+        "_priority",
+        "_orthoHeight",
+        "_far",
+        "_fov",
+        "node",
+        "_color"
+      ],
+      -4,
+      1,
+      5
+    ],
+    "cc.TextureCube",
+    "cc.SpriteAtlas",
+    [
+      "cc.Node",
+      ["_name", "_layer", "_parent", "_components", "_lpos", "_prefab"],
+      1,
+      1,
+      12,
+      5,
+      4
+    ],
+    ["cc.Widget", ["_alignFlags", "_left", "_right", "node"], 0, 1],
+    [
+      "cc.AmbientInfo",
+      ["_skyIllumLDR", "_skyColorHDR", "_skyColorLDR", "_groundAlbedoLDR"],
+      2,
+      5,
+      5,
+      5
+    ],
+    ["cc.ShadowsInfo", ["_shadowColor", "_size"], 3, 5, 5],
+    ["cc.SkyboxInfo", ["_enabled", "_envmapHDR", "_envmapLDR"], 2, 6, 6],
+    ["cc.FogInfo", ["_fogColor"], 3, 5],
+    ["cc.UIOpacity", ["node", "__prefab"], 3, 1, 4],
+    ["RenderQueueDesc", ["stages", "isTransparent", "sortMode"], 0],
+    ["cc.BitmapFont", ["_name", "fontSize", "fntConfig"], 0],
+    [
+      "sp.SkeletonData",
+      ["_name", "_native", "_atlasText", "textureNames", "textures"],
+      -1,
+      3
+    ],
+    ["cc.SceneAsset", ["_name"], 2],
+    ["cc.Node", ["_name", "_parent", "_components", "_lpos"], 2, 1, 2, 5],
+    ["cc.Canvas", ["node", "_cameraComponent"], 3, 1, 1],
+    ["cc.Scene", ["_name", "_children", "_prefab", "_globals"], 2, 2, 4, 4],
+    ["cc.PrefabInfo", ["fileId", "root", "asset"], 2, 1, 1],
+    [
+      "cc.SceneGlobals",
+      ["ambient", "shadows", "_skybox", "fog", "octree"],
+      3,
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    ["cc.OctreeInfo", [], 3],
+    ["cc.TargetInfo", ["localID"], 2],
+    ["cc.PrefabInstance", ["fileId", "propertyOverrides"], 2, 9],
+    ["CCPropertyOverrideInfo", ["value", "propertyPath", "targetInfo"], 1, 1],
+    [
+      "CCPropertyOverrideInfo",
+      ["propertyPath", "targetInfo", "value"],
+      2,
+      1,
+      8
+    ],
+    ["cc.DirectionalLight", ["node", "_color", "_staticSettings"], 3, 1, 5, 4],
+    ["cc.StaticLightSettings", [], 3],
+    ["89025dALbBFj7AFo+6o3xYM", ["node"], 3, 1],
+    [
+      "c933866GvpLKaZlVxLlOz0C",
+      [
+        "m_gameShortName",
+        "m_scenePrefabPath",
+        "m_gameImgPath",
+        "m_gameId",
+        "m_logoName",
+        "m_isLockPortrait",
+        "m_chilliNum",
+        "m_autoplayPanelNo",
+        "m_isRemote",
+        "m_infoNames",
+        "m_pagePrefabPaths",
+        "node",
+        "m_bgSpriteFrames",
+        "m_styleSetting",
+        "m_playTypeSetting",
+        "m_logoSpriteAtlas"
+      ],
+      -8,
+      1,
+      3,
+      4,
+      4,
+      6
+    ],
+    ["StyleSetting", [], 3],
+    ["PlayTypeSetting", [], 3],
+    ["cc.Prefab", ["_name"], 2],
+    ["cc.CompPrefabInfo", ["fileId"], 2],
+    [
+      "77acaFcNgVDULwRQEtO5wYa",
+      ["node", "__prefab", "m_spine", "m_winLabel"],
+      3,
+      1,
+      4,
+      1,
+      1
+    ],
+    [
+      "cc.Sprite",
+      ["_type", "_sizeMode", "node", "__prefab", "_spriteFrame"],
+      1,
+      1,
+      4,
+      6
+    ],
+    [
+      "cc.Layout",
+      [
+        "_resizeMode",
+        "_layoutType",
+        "_paddingLeft",
+        "_paddingRight",
+        "node",
+        "__prefab"
+      ],
+      -1,
+      1,
+      4
+    ],
+    [
+      "18f47v83XtI64h+ISwRgq3A",
+      [
+        "m_boneName",
+        "m_isCacheData",
+        "m_isFollowPosition",
+        "m_isFollowScale",
+        "m_isScaleLocalization",
+        "node",
+        "__prefab",
+        "m_spineSkeleton"
+      ],
+      -2,
+      1,
+      4,
+      1
+    ],
+    [
+      "sp.Skeleton",
+      [
+        "loop",
+        "_preCacheMode",
+        "_premultipliedAlpha",
+        "defaultSkin",
+        "defaultAnimation",
+        "_enableBatch",
+        "node",
+        "__prefab"
+      ],
+      -3,
+      1,
+      4
+    ],
+    [
+      "cc.Label",
+      [
+        "_string",
+        "_actualFontSize",
+        "_isSystemFontUsed",
+        "_spacingX",
+        "node",
+        "__prefab"
+      ],
+      -1,
+      1,
+      4
+    ],
+    ["ForwardPipeline", ["_flows"], 3, 9],
+    ["ShadowFlow", ["_name", "_stages"], 2, 9],
+    ["ShadowStage", ["_name"], 2],
+    ["ForwardFlow", ["_name", "_priority", "_stages"], 1, 9],
+    ["ForwardStage", ["_name", "renderQueues"], 2, 9]
+  ],
+  [
+    [37, 0, 2],
+    [23, 0, 1, 2, 2],
+    [4, 0, 1, 1],
+    [4, 0, 2, 1, 1],
+    [29, 0, 1, 2, 2],
+    [19, 0, 2],
+    [2, 0, 1, 2, 6, 5, 9, 4],
+    [9, 0, 1, 2, 3, 5, 3],
+    [21, 0, 1, 1],
+    [22, 0, 1, 2, 3, 2],
+    [24, 0, 1, 2, 3, 4, 1],
+    [25, 1],
+    [15, 0, 1],
+    [17, 0, 1, 2, 4],
+    [18, 0, 1, 2, 3, 4, 5],
+    [2, 3, 4, 7, 8, 3],
+    [2, 0, 2, 7, 5, 10, 11, 3],
+    [2, 0, 2, 7, 5, 9, 10, 11, 3],
+    [2, 0, 1, 6, 5, 8, 3],
+    [2, 0, 1, 6, 5, 8, 9, 3],
+    [2, 0, 1, 7, 6, 5, 8, 3],
+    [20, 0, 1, 2, 3, 2],
+    [9, 0, 1, 2, 3, 4, 3],
+    [4, 0, 2, 1],
+    [4, 0, 2, 1, 3, 1],
+    [10, 0, 3, 2],
+    [10, 0, 1, 2, 3, 4],
+    [5, 0, 1, 2, 3],
+    [5, 0, 3, 4, 5, 2],
+    [5, 0, 2],
+    [11, 0, 1, 2, 3, 2],
+    [11, 0, 1, 2, 2],
+    [12, 0, 1],
+    [12, 1, 1],
+    [13, 0, 1, 2, 2],
+    [13, 1],
+    [14, 1],
+    [14, 0, 1],
+    [26, 0, 2],
+    [27, 0, 1, 2],
+    [28, 0, 1, 2, 3],
+    [30, 0, 1, 2, 1],
+    [31, 1],
+    [6, 1, 0, 7, 3],
+    [6, 2, 3, 4, 5, 1, 0, 7, 8, 7],
+    [6, 2, 3, 6, 4, 5, 0, 7, 8, 7],
+    [32, 0, 1],
+    [33, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 12],
+    [34, 1],
+    [35, 1],
+    [15, 0, 1, 1],
+    [36, 0, 2],
+    [38, 0, 1, 2, 3, 1],
+    [39, 0, 1, 2, 3, 4, 3],
+    [40, 0, 1, 2, 3, 4, 5, 5],
+    [41, 0, 1, 2, 3, 4, 5, 6, 7, 6],
+    [42, 0, 1, 2, 3, 4, 5, 6, 7, 7],
+    [43, 0, 1, 2, 3, 4, 5, 5],
+    [44, 0, 1],
+    [45, 0, 1, 2],
+    [46, 0, 2],
+    [47, 0, 1, 2, 3],
+    [48, 0, 1, 2],
+    [16, 0, 2],
+    [16, 1, 2, 0, 4]
+  ],
+  [
+    [
+      [
+        {
+          "name": "Intro_Symbol_02",
+          "rect": { "x": 511, "y": 641, "width": 82, "height": 74 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 82, "height": 74 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Woodendoor_UI",
+          "rect": { "x": 352, "y": 505, "width": 118, "height": 118 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 118, "height": 118 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Symbol_05",
+          "rect": { "x": 329, "y": 712, "width": 82, "height": 76 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 82, "height": 76 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Feature_02",
+          "rect": { "x": 329, "y": 379, "width": 287, "height": 256 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 287, "height": 256 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        [
+          13,
+          "BuffaloSlot2_AmountFigure",
+          38,
+          {
+            "commonHeight": 38,
+            "fontSize": 38,
+            "atlasName": "BuffaloSlot2_AmountFigure.png",
+            "fontDefDictionary": {
+              "44": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 28,
+                "rect": { "x": 114, "y": 146, "width": 30, "height": 72 }
+              },
+              "46": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 28,
+                "rect": { "x": 145, "y": 146, "width": 30, "height": 72 }
+              },
+              "48": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 0, "y": 0, "width": 56, "height": 72 }
+              },
+              "49": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 57, "y": 0, "width": 56, "height": 72 }
+              },
+              "50": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 114, "y": 0, "width": 56, "height": 72 }
+              },
+              "51": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 171, "y": 0, "width": 56, "height": 72 }
+              },
+              "52": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 0, "y": 73, "width": 56, "height": 72 }
+              },
+              "53": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 57, "y": 73, "width": 56, "height": 72 }
+              },
+              "54": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 114, "y": 73, "width": 56, "height": 72 }
+              },
+              "55": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 171, "y": 73, "width": 56, "height": 72 }
+              },
+              "56": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 0, "y": 146, "width": 56, "height": 72 }
+              },
+              "57": {
+                "xOffset": -1,
+                "yOffset": -1,
+                "xAdvance": 54,
+                "rect": { "x": 57, "y": 146, "width": 56, "height": 72 }
+              }
+            },
+            "kerningDict": {}
+          }
+        ]
+      ],
+      0,
+      0,
+      [0],
+      [6],
+      [3]
+    ],
+    [[{ "fmt": "0_4_7@93", "w": 286, "h": 316 }, -1], [1], 0, [], [], []],
+    [[{ "base": "2,2,0,0,0,0", "mipmaps": ["1bf80e82b"] }], [3], 0, [], [], []],
+    [[{ "fmt": "0_4_7@93", "w": 816, "h": 810 }, -1], [1], 0, [], [], []],
+    [[{ "base": "2,2,0,0,0,0", "mipmaps": ["1c18394cb"] }], [3], 0, [], [], []],
+    [[{ "fmt": "0_4_7@93", "w": 683, "h": 679 }, -1], [1], 0, [], [], []],
+    [[{ "base": "2,2,0,0,0,0", "mipmaps": ["1edecdff8"] }], [3], 0, [], [], []],
+    [
+      [
+        {
+          "name": "Intro_Superwin_Board",
+          "rect": { "x": 567, "y": 237, "width": 231, "height": 99 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 231, "height": 99 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "logo_tw",
+          "rect": { "x": 3, "y": 219, "width": 280, "height": 94 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 280, "height": 130 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [2]
+    ],
+    [
+      [
+        {
+          "name": "Frame_Bottom",
+          "rect": { "x": 645, "y": 3, "width": 572, "height": 35 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 574, "height": 37 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Symbol_03",
+          "rect": { "x": 423, "y": 641, "width": 82, "height": 78 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 82, "height": 78 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Feature_LT_01",
+          "rect": { "x": 496, "y": 729, "width": 64, "height": 64 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 64, "height": 64 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Symbol_04",
+          "rect": { "x": 591, "y": 703, "width": 79, "height": 62 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 79, "height": 62 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        [
+          14,
+          "BigWin",
+          ".bin",
+          "\nBigWin.png\nsize: 968,968\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\nAdd/FX_Sparkles_03_New\n  rotate: false\n  xy: 489, 327\n  size: 220, 157\n  orig: 241, 173\n  offset: 6, 3\n  index: -1\nBigWin/C_Coin1\n  rotate: false\n  xy: 859, 558\n  size: 43, 43\n  orig: 43, 43\n  offset: 0, 0\n  index: -1\nBigWin/C_Coin2\n  rotate: false\n  xy: 489, 646\n  size: 43, 43\n  orig: 43, 43\n  offset: 0, 0\n  index: -1\nBigWin/C_Coin3\n  rotate: false\n  xy: 489, 583\n  size: 43, 43\n  orig: 43, 43\n  offset: 0, 0\n  index: -1\nBigWin/Control_Panel_1\n  rotate: false\n  xy: 20, 57\n  size: 417, 239\n  orig: 417, 239\n  offset: 0, 0\n  index: -1\nBigWin/Control_Panel_2\n  rotate: false\n  xy: 20, 709\n  size: 555, 239\n  orig: 555, 239\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Flare2\n  rotate: false\n  xy: 862, 768\n  size: 64, 64\n  orig: 64, 64\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Flare_Rainbow\n  rotate: false\n  xy: 839, 211\n  size: 109, 64\n  orig: 109, 64\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Shine1\n  rotate: false\n  xy: 815, 410\n  size: 128, 128\n  orig: 128, 128\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Spot_1\n  rotate: false\n  xy: 489, 179\n  size: 128, 128\n  orig: 128, 128\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Spot_2\n  rotate: false\n  xy: 862, 691\n  size: 55, 57\n  orig: 55, 57\n  offset: 0, 0\n  index: -1\nBigWin/Fx_Star_3\n  rotate: false\n  xy: 859, 621\n  size: 50, 50\n  orig: 50, 50\n  offset: 0, 0\n  index: -1\nBigWin/HP_TEXT1\n  rotate: false\n  xy: 729, 295\n  size: 218, 95\n  orig: 220, 97\n  offset: 1, 1\n  index: -1\nBigWin/HP_TEXT2\n  rotate: false\n  xy: 552, 504\n  size: 243, 96\n  orig: 245, 98\n  offset: 1, 1\n  index: -1\nBigWin/HP_TEXT3\n  rotate: false\n  xy: 595, 852\n  size: 331, 96\n  orig: 333, 98\n  offset: 1, 1\n  index: -1\nBigWin/HP_TEXT4\n  rotate: false\n  xy: 595, 620\n  size: 244, 96\n  orig: 246, 98\n  offset: 1, 1\n  index: -1\nBigWin/HP_TEXT5\n  rotate: false\n  xy: 457, 63\n  size: 362, 96\n  orig: 364, 98\n  offset: 1, 1\n  index: -1\nBigWin/HP_TEXT6\n  rotate: false\n  xy: 595, 736\n  size: 247, 96\n  orig: 249, 98\n  offset: 1, 1\n  index: -1\nBigWin/Light_1\n  rotate: false\n  xy: 20, 316\n  size: 449, 373\n  orig: 449, 373\n  offset: 0, 0\n  index: -1\n",
+          ["BigWin.png"],
+          [0]
+        ],
+        -1
+      ],
+      0,
+      0,
+      [0],
+      [-1],
+      [4]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Coin_03",
+          "rect": { "x": 411, "y": 725, "width": 79, "height": 77 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 79, "height": 77 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        [5, "scene"],
+        [
+          6,
+          "Canvas",
+          33554432,
+          "60xXbOccxC0oVKEk7ghWNo",
+          [-5, -6],
+          [
+            [2, -1, [5, 640, 1136]],
+            [8, -3, -2],
+            [25, 45, -4]
+          ],
+          [1, 320, 568, 0]
+        ],
+        [
+          9,
+          "scene",
+          [-8, -9, 1],
+          [27, "4b0f020c-9cc5-42c6-83f3-6138aa05d07a", [], [-7]],
+          [
+            10,
+            [
+              30,
+              0.5208,
+              [2, 0.2, 0.5, 0.8, 0.520833125],
+              [2, 0.36244, 0.486029, 0.632565, 0.5208],
+              [2, 0.437391, 0.436011, 0.436589, 0]
+            ],
+            [32, [4, 4283190348]],
+            [34, true, 1, 2],
+            [36],
+            [11]
+          ]
+        ],
+        [38, ["58YqE6XuJFyKhlYrhM0Fqo"]],
+        [
+          15,
+          0,
+          {},
+          1,
+          [
+            28,
+            "58YqE6XuJFyKhlYrhM0Fqo",
+            -10,
+            [
+              39,
+              "c0PKlfn1pI4Z+SAAH0wQyy",
+              [
+                [40, "BigWin", ["_name"], 3],
+                [4, ["_lpos"], 3, [1, 0, 0, 0]],
+                [4, ["_lrot"], 3, [3, 0, 0, 0, 1]],
+                [4, ["_euler"], 3, [1, 0, 0, 0]]
+              ]
+            ],
+            0
+          ]
+        ],
+        [
+          16,
+          "Main Light",
+          "c0y6F5f+pAvI805TdmxIjx",
+          2,
+          [[41, -11, [4, 4293982975], [42]]],
+          [
+            3, -0.06397656665577071, -0.44608233363525845, -0.8239028751062036,
+            -0.3436591377065261
+          ],
+          [1, -117.894, -194.909, 38.562]
+        ],
+        [
+          17,
+          "Main Camera",
+          "c9DMICJLFO5IeO07EPon7U",
+          2,
+          [[43, 14, 1822425087, -12]],
+          [1, -10, 10, 10],
+          [
+            3, -0.27781593346944056, -0.36497167621709875, -0.11507512748638377,
+            0.8811195706053617
+          ],
+          [1, -35, -45, 0]
+        ],
+        [21, "Camera", 1, [-13], [1, 0, 0, 1000]],
+        [44, 0, 1073741824, 568, 2000, 6, 41943040, 7, [4, 4278190080]]
+      ],
+      0,
+      [
+        0, 1, 1, 0, 3, 8, 0, 1, 1, 0, 1, 1, 0, -1, 7, 0, -2, 4, 0, -1, 4, 0, -1,
+        5, 0, -2, 6, 0, 4, 4, 0, 1, 5, 0, 1, 6, 0, -1, 8, 0, 5, 2, 1, 2, 2, 13
+      ],
+      [0, 0, 0],
+      [7, 8, 9],
+      [5, 6, 7]
+    ],
+    [
+      [
+        {
+          "name": "Frame_2",
+          "rect": { "x": 279, "y": 423, "width": 122, "height": 22 },
+          "offset": { "x": 0, "y": 1.5 },
+          "originalSize": { "width": 122, "height": 29 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Coin_04",
+          "rect": { "x": 696, "y": 446, "width": 97, "height": 73 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 97, "height": 73 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "button_01",
+          "rect": { "x": 467, "y": 430, "width": 53, "height": 53 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 53, "height": 53 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Frame_1X5",
+          "rect": { "x": 144, "y": 193, "width": 116, "height": 405 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 116, "height": 405 },
+          "rotated": true,
+          "capInsets": [0, 138, 0, 139],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Symbol_07",
+          "rect": { "x": 676, "y": 703, "width": 78, "height": 61 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 78, "height": 61 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Up_arrow",
+          "rect": { "x": 279, "y": 451, "width": 117, "height": 48 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 117, "height": 48 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "logo_cn",
+          "rect": { "x": 3, "y": 118, "width": 280, "height": 95 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 280, "height": 130 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [2]
+    ],
+    [
+      [
+        {
+          "name": "Lnformation_Frame",
+          "rect": { "x": 144, "y": 423, "width": 71, "height": 129 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 71, "height": 129 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Coin_02",
+          "rect": { "x": 676, "y": 770, "width": 72, "height": 37 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 72, "height": 37 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "base": "2,2,0,0,2,0",
+          "rgbe": false,
+          "mipmaps": [
+            {
+              "front": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@e9a6d",
+              "back": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@40c10",
+              "left": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@8fd34",
+              "right": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@74afd",
+              "top": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@bb97f",
+              "bottom": "6f01cf7f-81bf-4a7e-bd5d-0afc19696480@b47c0@7d38f"
+            }
+          ]
+        }
+      ],
+      [7],
+      0,
+      [],
+      [],
+      []
+    ],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [
+      [
+        {
+          "name": "Intro_Symbol_01",
+          "rect": { "x": 710, "y": 609, "width": 69, "height": 56 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 69, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Feature_LT_03",
+          "rect": { "x": 760, "y": 671, "width": 58, "height": 53 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 64, "height": 64 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "button_02",
+          "rect": { "x": 407, "y": 430, "width": 53, "height": 54 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 53, "height": 54 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Bg_P",
+          "rect": { "x": 3, "y": 3, "width": 320, "height": 800 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 320, "height": 800 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Coin_01",
+          "rect": { "x": 329, "y": 641, "width": 88, "height": 65 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 88, "height": 65 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Frame_line",
+          "rect": { "x": 144, "y": 315, "width": 3, "height": 333 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 3, "height": 333 },
+          "rotated": true,
+          "capInsets": [0, 50, 0, 50],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "logo",
+          "spriteFrames": [
+            "logo_en",
+            "d0WpxwEUNJAKio8y7NHkQi@f9941",
+            "logo_cn",
+            "618TBMOnxPRrGFmtLzqFaP@f9941",
+            "logo_tw",
+            "24YnlYM9VKbJqbzAHnP3L9@f9941"
+          ]
+        }
+      ],
+      [8],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "logo",
+          "spriteFrames": [
+            "logo_en",
+            "d0WpxwEUNJAKio8y7NHkQi@f9941",
+            "logo_cn",
+            "618TBMOnxPRrGFmtLzqFaP@f9941",
+            "logo_tw",
+            "24YnlYM9VKbJqbzAHnP3L9@f9941"
+          ]
+        }
+      ],
+      [8],
+      0,
+      [],
+      [],
+      []
+    ],
+    [[{ "fmt": "0_4_7@93", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [
+      [{ "base": "2,2,0,0,0,0", "mipmaps": ["99FWNixbhPDoEzgmj+g5nS"] }],
+      [3],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "BuffaloSlot2_AmountFigure",
+          "rect": { "x": 3, "y": 1, "width": 222, "height": 216 },
+          "offset": { "x": -14, "y": 19 },
+          "originalSize": { "width": 256, "height": 256 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "vertices": {
+            "rawPosition": [
+              -111, -108, 0, 111, -108, 0, -111, 108, 0, 111, 108, 0
+            ],
+            "indexes": [0, 1, 2, 2, 1, 3],
+            "uv": [3, 255, 225, 255, 3, 39, 225, 39],
+            "nuv": [
+              0.01171875, 0.15234375, 0.87890625, 0.15234375, 0.01171875,
+              0.99609375, 0.87890625, 0.99609375
+            ],
+            "minPos": { "x": -111, "y": -108, "z": 0 },
+            "maxPos": { "x": 111, "y": 108, "z": 0 }
+          },
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [8]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Superwin",
+          "rect": { "x": 622, "y": 545, "width": 152, "height": 82 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 152, "height": 82 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [[{ "fmt": "0_4_7@93", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [
+      [{ "base": "2,2,0,0,0,0", "mipmaps": ["9fM4Xs3otGuKqLp/kNJDlq"] }],
+      [3],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "Intro_Feature_01",
+          "rect": { "x": 329, "y": 3, "width": 370, "height": 232 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 370, "height": 232 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Event_Frame",
+          "rect": { "x": 3, "y": 3, "width": 636, "height": 184 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 636, "height": 184 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        [5, "MainGame"],
+        [
+          6,
+          "Canvas",
+          1,
+          "a5esZu+45LA5mBpvttspPD",
+          [-8],
+          [
+            [8, -2, -1],
+            [26, 45, 5.684341886080802e-14, 5.684341886080802e-14, -3],
+            [46, -4],
+            [
+              47,
+              "bfs2",
+              "/Prefab/MainGame",
+              "/Text/",
+              "259",
+              "logo",
+              true,
+              3,
+              1,
+              true,
+              ["txt1", "txt2"],
+              ["/Prefab/Intro/Intro_Cell_01", "/Prefab/Intro/Intro_Cell_02"],
+              -5,
+              [1],
+              [48],
+              [49],
+              0
+            ],
+            [12, -6],
+            [2, -7, [5, 640, 1136]]
+          ],
+          [1, 320.00000000000006, 568, 0]
+        ],
+        [
+          22,
+          "Main Camera",
+          1,
+          1,
+          [[-9, [12, -10], [2, -11, [5, 960, 640]]], 1, 4, 4],
+          [1, 0, 0, 1000]
+        ],
+        [
+          9,
+          "MainGame",
+          [1],
+          [29, "c9260111-eb8a-42ee-b37c-92355041a5be"],
+          [
+            10,
+            [
+              31,
+              0.78125,
+              [2, 0.2, 0.5019607843137255, 0.8, 0.520833125],
+              [2, 0.2, 0.5019607843137255, 0.8, 0.520833125]
+            ],
+            [33, [0, 512, 512]],
+            [35],
+            [37, [4, 4292993505]],
+            [11]
+          ]
+        ],
+        [45, 0, -1, 60, 568, 4096, 4294967295, 2, [4, 4278190080]]
+      ],
+      0,
+      [
+        0, 3, 4, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 0, -1, 2,
+        0, -1, 4, 0, 1, 2, 0, 1, 2, 0, 5, 3, 1, 2, 3, 11
+      ],
+      [0, 0],
+      [10, -1],
+      [9, 10]
+    ],
+    [
+      [
+        {
+          "base": "2,2,0,0,2,0",
+          "rgbe": true,
+          "mipmaps": [
+            {
+              "front": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@e9a6d",
+              "back": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@40c10",
+              "left": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@8fd34",
+              "right": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@74afd",
+              "top": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@bb97f",
+              "bottom": "d032ac98-05e1-4090-88bb-eb640dcb5fc1@b47c0@7d38f"
+            }
+          ]
+        }
+      ],
+      [7],
+      0,
+      [],
+      [],
+      []
+    ],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [[{ "fmt": "0", "w": 0, "h": 0 }, -1], [1], 0, [], [], []],
+    [
+      [
+        {
+          "name": "logo_en",
+          "rect": { "x": 3, "y": 3, "width": 280, "height": 109 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 280, "height": 130 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [2]
+    ],
+    [
+      [
+        {
+          "name": "bottom",
+          "rect": { "x": 421, "y": 324, "width": 100, "height": 100 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 100, "height": 100 },
+          "rotated": false,
+          "capInsets": [43, 39, 43, 44],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        [51, "BigWin"],
+        [
+          18,
+          "BigWin",
+          33554432,
+          [-7],
+          [
+            [50, -2, [0, "9bBwsUGWZFr4+P9srvwszr"]],
+            [3, -3, [0, "36eIgkOHZMSbLSe7HcntCj"], [5, 0, 0]],
+            [52, -6, [0, "50v7TMXK9HnpJbLroFue/0"], -5, -4]
+          ],
+          [1, "58YqE6XuJFyKhlYrhM0Fqo", -1, 0]
+        ],
+        [
+          19,
+          "Smallwin_Frame",
+          33554432,
+          [-13],
+          [
+            [3, -8, [0, "c2kwKHb49BOL9KrnxODIsR"], [5, 601.5799999999999, 93]],
+            [53, 1, 0, -9, [0, "d89lIoXQlC6p5IcUr+8pj9"], 0],
+            [54, 1, 1, 50, 50, -10, [0, "93ARes23BNYY9UuwjZhwh0"]],
+            [
+              55,
+              "HP_NUM_BG",
+              true,
+              true,
+              true,
+              true,
+              -12,
+              [0, "5444FEvLpDj7XgSxWz5Kc2"],
+              -11
+            ]
+          ],
+          [1, "01cWOLyyRPZYQ38ZgrZywC", 1, 0],
+          [1, 0, -170, 0]
+        ],
+        [
+          20,
+          "Node_00",
+          33554432,
+          1,
+          [-15, 2],
+          [[23, -14, [0, "deSFASWRBE0Kh5bDWZrFIz"]]],
+          [1, "e7NBba2i1DMZPX3KDvIDUr", 1, 0]
+        ],
+        [
+          7,
+          "Spine",
+          33554432,
+          3,
+          [[[3, -16, [0, "7e0mFB+3JHNbtXFuu3DPui"], [5, 0, 0]], -17], 4, 1],
+          [1, "e02ytKKi1CaZCdczis7jw1", 1, 0]
+        ],
+        [
+          56,
+          false,
+          0,
+          false,
+          "default",
+          "BigWin_End",
+          true,
+          4,
+          [0, "e0grd9TAtPRJWs23gXEHYj"]
+        ],
+        [
+          7,
+          "HP_NUM1",
+          33554432,
+          2,
+          [
+            [
+              [
+                24,
+                -18,
+                [0, "73VH6UwStOd5sQbMCOlebG"],
+                [5, 501.58, 40],
+                [0, 0.5, 0.2]
+              ],
+              -19
+            ],
+            4,
+            1
+          ],
+          [1, "50O3q4/IBHfrCucOs+DDYK", 1, 0]
+        ],
+        [57, "000,000,000", 40, false, -7, 6, [0, "dcZY2UsPpIUZTOitlvVVJp"]]
+      ],
+      0,
+      [
+        0, 4, 1, 0, 1, 1, 0, 1, 1, 0, 11, 7, 0, 12, 5, 0, 1, 1, 0, -1, 3, 0, 1,
+        2, 0, 1, 2, 0, 1, 2, 0, 13, 5, 0, 1, 2, 0, -1, 6, 0, 1, 3, 0, -1, 4, 0,
+        1, 4, 0, -2, 5, 0, 1, 6, 0, -2, 7, 0, 14, 1, 2, 2, 3, 19
+      ],
+      [0, 5, 7],
+      [15, 16, 17],
+      [11, 12, 13]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Ox",
+          "rect": { "x": 622, "y": 342, "width": 68, "height": 197 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 68, "height": 197 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Intro_LT_01",
+          "rect": { "x": 696, "y": 342, "width": 98, "height": 82 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 98, "height": 82 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Frame_L",
+          "rect": { "x": 3, "y": 193, "width": 135, "height": 343 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 137, "height": 345 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Intro_Symbol_06",
+          "rect": { "x": 710, "y": 525, "width": 78, "height": 61 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 78, "height": 61 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Frame_R",
+          "rect": { "x": 3, "y": 542, "width": 134, "height": 343 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 136, "height": 345 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        {
+          "name": "Smallwin_Frame",
+          "rect": { "x": 144, "y": 324, "width": 271, "height": 93 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 271, "height": 93 },
+          "rotated": false,
+          "capInsets": [95, 0, 95, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [1]
+    ],
+    [
+      [
+        [
+          58,
+          [
+            [59, "ShadowFlow", [[60, "ShadowStage"]]],
+            [
+              61,
+              "ForwardFlow",
+              1,
+              [
+                [
+                  62,
+                  "ForwardStage",
+                  [
+                    [63, ["default"]],
+                    [64, true, 1, ["default"]]
+                  ]
+                ]
+              ]
+            ]
+          ]
+        ]
+      ],
+      0,
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "Intro_Feature_LT_02",
+          "rect": { "x": 567, "y": 3, "width": 218, "height": 228 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 218, "height": 228 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
