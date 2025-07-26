@@ -1,0 +1,368 @@
+[
+  1,
+  ["1faa7f369@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 627, "y": 581, "width": 155, "height": 36 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 541, "height": 51 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Level",
+          "rect": { "x": 530, "y": 520, "width": 166, "height": 91 },
+          "offset": { "x": 1.5, "y": 0 },
+          "originalSize": { "width": 199, "height": 91 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_fg_won",
+          "rect": { "x": 422, "y": 762, "width": 249, "height": 59 },
+          "offset": { "x": -3.5, "y": -3.5 },
+          "originalSize": { "width": 476, "height": 84 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_01",
+            "a8DPjdUoVChbVWJIjZPdpS@f9941",
+            "Txt_Fg_Congrats",
+            "75qN4HQKNLMY0qJrhABAia@f9941",
+            "txt2",
+            "5cU+KcUX1EtY22LB/kSslO@f9941",
+            "Txt_fg_won",
+            "33t3tvILNPy4fRPseqTSaz@f9941",
+            "Txt_Buy_Feature_01",
+            "72cI5sG+BFwKl+5aA3KUWb@f9941",
+            "Txt_Buy_Feature_02",
+            "54PcSma35Et5ChAvN0sOKE@f9941",
+            "Txt_Bet",
+            "adJL458G1BqoCtAiwTUzvl@f9941",
+            "Txt_BonusFeature",
+            "efyqjJnRhOC6Wa3w/JuKcB@f9941",
+            "Txt_Level",
+            "0dVxHjeoFKxJU+haJQ0zir@f9941",
+            "Txt_Buy_Feature_Title",
+            "c2fHo1YpVNt6DU4K/dYqN/@f9941",
+            "String_00",
+            "01K+bHuPtJO73Y7vk+nPJO@f9941",
+            "Txt_all_wins",
+            "485Bf8YKpEEIFMjcn5n2F0@f9941",
+            "Txt_Buy_Feature_Buy",
+            "9bULgHmDRPfIrBMnFu7hCC@f9941",
+            "Txt_FG_Compliment",
+            "85T1s2IlpHtaP6CiDdI7Q2@f9941",
+            "txt1",
+            "67lFWufTdKXLl6M69L93te@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "Txt_all_wins",
+          "rect": { "x": 627, "y": 623, "width": 176, "height": 31 },
+          "offset": { "x": -0.5, "y": -0.5 },
+          "originalSize": { "width": 181, "height": 48 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Buy_Feature_02",
+          "rect": { "x": 422, "y": 827, "width": 111, "height": 13 },
+          "offset": { "x": 0.5, "y": 32.5 },
+          "originalSize": { "width": 170, "height": 88 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 422, "y": 710, "width": 421, "height": 46 },
+          "offset": { "x": 0.5, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 812, "y": 3, "width": 463, "height": 19 },
+          "offset": { "x": 0.5, "y": 0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Buy_Feature_01",
+          "rect": { "x": 677, "y": 762, "width": 158, "height": 79 },
+          "offset": { "x": 1, "y": -0.5 },
+          "originalSize": { "width": 170, "height": 88 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Fg_Congrats",
+          "rect": { "x": 3, "y": 710, "width": 413, "height": 126 },
+          "offset": { "x": 3, "y": -2 },
+          "originalSize": { "width": 543, "height": 178 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_FG_Compliment",
+          "rect": { "x": 739, "y": 3, "width": 457, "height": 67 },
+          "offset": { "x": -0.5, "y": -3.5 },
+          "originalSize": { "width": 476, "height": 84 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Buy_Feature_Buy",
+          "rect": { "x": 627, "y": 660, "width": 166, "height": 25 },
+          "offset": { "x": 0, "y": 0.5 },
+          "originalSize": { "width": 180, "height": 36 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 3, "y": 3, "width": 521, "height": 701 },
+          "offset": { "x": -8.5, "y": 4 },
+          "originalSize": { "width": 540, "height": 711 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Bet",
+          "rect": { "x": 539, "y": 827, "width": 94, "height": 15 },
+          "offset": { "x": -1, "y": -0.5 },
+          "originalSize": { "width": 150, "height": 30 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_Buy_Feature_Title",
+          "rect": { "x": 627, "y": 520, "width": 213, "height": 55 },
+          "offset": { "x": 0.5, "y": -1.5 },
+          "originalSize": { "width": 300, "height": 60 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_BonusFeature",
+          "rect": { "x": 530, "y": 3, "width": 511, "height": 203 },
+          "offset": { "x": 0, "y": -6 },
+          "originalSize": { "width": 543, "height": 255 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
