@@ -1,0 +1,276 @@
+[
+  1,
+  ["11fafe7a0@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "FG_txt_04",
+          "rect": { "x": 147, "y": 892, "width": 170, "height": 28 },
+          "offset": { "x": 0.5, "y": 0.5 },
+          "originalSize": { "width": 181, "height": 43 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "FG_txt_03",
+          "rect": { "x": 325, "y": 3, "width": 217, "height": 35 },
+          "offset": { "x": 0.5, "y": 0.5 },
+          "originalSize": { "width": 232, "height": 54 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "FG_txt_01",
+          "rect": { "x": 151, "y": 3, "width": 431, "height": 75 },
+          "offset": { "x": 0, "y": -1.5 },
+          "originalSize": { "width": 537, "height": 104 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_03",
+            "8eY6E0D6JL+IU5CCd+JY9V@f9941",
+            "String_02",
+            "88s9cJohRABquWCKAW4Iyn@f9941",
+            "txt1",
+            "c2q1E7/m1HhI3eYZswoN1h@f9941",
+            "FG_txt_02",
+            "ba8pgynZtEDYZr4upIA4pY@f9941",
+            "FG_txt_04",
+            "17Kb7w2PtNZoArFM/docm/@f9941",
+            "FG_txt_01",
+            "43s+c/0BdPdbSU7u2idWaz@f9941",
+            "FG_txt_05",
+            "a4/Z7JfF1ER500IjmX9tiY@f9941",
+            "txt2",
+            "c0t7JytUNMYqHmWhkh1GIF@f9941",
+            "String_01",
+            "e6JbWpAedJnKjBObCyTGlX@f9941",
+            "String_00",
+            "f8dqsaWUpIjbTmkMjnn5wt@f9941",
+            "FG_txt_03",
+            "17lR7GhgNC2KHHfGzCAsjB@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "String_02",
+          "rect": { "x": 3, "y": 522, "width": 420, "height": 138 },
+          "offset": { "x": -56.5, "y": 1 },
+          "originalSize": { "width": 535, "height": 146 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_03",
+          "rect": { "x": 3, "y": 3, "width": 513, "height": 142 },
+          "offset": { "x": -10, "y": 0.5 },
+          "originalSize": { "width": 535, "height": 151 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "FG_txt_05",
+          "rect": { "x": 212, "y": 440, "width": 434, "height": 54 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 624, "height": 59 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "FG_txt_02",
+          "rect": { "x": 147, "y": 522, "width": 364, "height": 59 },
+          "offset": { "x": 0.5, "y": 0 },
+          "originalSize": { "width": 379, "height": 83 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 232, "y": 3, "width": 307, "height": 53 },
+          "offset": { "x": 0.5, "y": 0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 3, "y": 948, "width": 332, "height": 50 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 272, "y": 316, "width": 468, "height": 52 },
+          "offset": { "x": -27.5, "y": 1 },
+          "originalSize": { "width": 535, "height": 64 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 291, "y": 3, "width": 289, "height": 28 },
+          "offset": { "x": 1, "y": -1 },
+          "originalSize": { "width": 535, "height": 54 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
