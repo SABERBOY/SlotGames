@@ -122,19 +122,27 @@ const SendTestSpinInfo = function (data,trueData) {
                             code = f.read()
                         backup_path = jsfile.with_suffix(jsfile.suffix + ".bak")
                         shutil.copy(jsfile, backup_path)
-                        # 1. 匹配OnCommand方法
-                        m = re.search(r'(\((\w+)\.OnCommand\s*=\s*function\s*\(([^)]*)\)\s*\{)', code)
+                        # 1. 匹配OnCommand方法（兼容解密后无括号形式以及有括号形式）
+                        # 示例1: _0x26d398.OnCommand = function (a,b) { ... }
+                        # 示例2: (_0x26d398.OnCommand = function (a,b) { ... })
+                        pattern_oncmd = r'(?P<head>(?P<paren>\()?\s*(?P<obj>[A-Za-z_$][\w$]*)\.OnCommand\s*=\s*function\s*\((?P<params>[^)]*)\)\s*\{)'
+                        m = re.search(pattern_oncmd, code)
                         if not m:
                             print(f"未找到OnCommand方法: {jsfile}")
                             if backup_path.exists():
                                 backup_path.unlink()
                             continue
-                        obj = m.group(2)
-                        params = m.group(3)
-                        # 2. 增加data参数
-                        if 'data' not in params.split(','):
-                            new_params = params + (',' if params.strip() else '') + 'data'
-                            code = code.replace(m.group(1), f'({obj}.OnCommand = function({new_params})' + ' {', 1)
+                        obj = m.group('obj')
+                        params = m.group('params')
+                        # 2. 增加data参数（若不存在）
+                        param_list = [p.strip() for p in params.split(',') if p.strip() != '']
+                        if 'data' not in param_list:
+                            new_params = (', '.join(param_list + ['data'])) if param_list else 'data'
+                            # 构造新的方法头，保留可选的前置括号
+                            paren = m.group('paren') or ''
+                            new_head = f"{paren}{obj}.OnCommand = function({new_params}) {{"
+                            head_start, head_end = m.span('head')
+                            code = code[:head_start] + new_head + code[head_end:]
                         # 4. 找switch-case，插入SendTestSpinInfo调用
                         def insert_send_func(code):
                             # 模糊查找 AckType.spin 和 AckType.lastSpin 语句

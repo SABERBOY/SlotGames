@@ -187,40 +187,46 @@ def decode_index_js_files():
     查找 astarte2/3.6/web-mobile/assets/other/ 目录下以 index 开头的 js 文件，
     并调用 run_decode_js 进行处理，输出文件放在输入文件夹中，文件名为原名加 _decoded.js
     """
-    # input_dir = os.path.join("astarte2", "3.6", "web-mobile", "assets", "other")
-    # pattern = os.path.join(input_dir, "index*.js")
-    # files = glob.glob(pattern)
-    # for input_js in files:
-    #     base, ext = os.path.splitext(input_js)
-    #     output_js = f"{base}_decoded{ext}"
-    #     run_decode_js(os.path.abspath(input_js), os.path.abspath(output_js))
+    # 新逻辑：
+    # 1) 在项目根目录递归查找包含 index.html 的文件夹
+    # 2) 若该文件夹存在 assets 子目录，则在 assets/game 与 assets/main 目录下
+    #    查找以 index 开头的 .js 文件
+    # 3) 使用 run_decode_js 进行解密，输出到同目录，文件名追加 _decoded
 
-    """
-    在所有根目录的文件夹中模糊查找是否有"3.6"的文件夹，
-    如果有就继续查找该文件夹中是否有"web-mobile"文件夹，
-    最终查找 assets/other 目录下以 index 开头的 js 文件并处理。
-    """
     project_root = os.getcwd()
+    total_decoded = 0
     for root, dirs, files in os.walk(project_root):
-        # 查找名为"3.6"的文件夹
-        if "3.6" in dirs:
-            path_36 = os.path.join(root, "3.6")
-            # 查找"3.6"下的"web-mobile"
-            web_mobile_path = os.path.join(path_36, "web-mobile")
-            if os.path.isdir(web_mobile_path):
-                # assets/other 路径
-                other_path = os.path.join(web_mobile_path, "assets", "other")
-                if os.path.isdir(other_path):
-                    pattern = os.path.join(other_path, "index*.js")
-                    files = glob.glob(pattern)
-                    # 只獲取第一個文件
-                    files = files[:1]
-                    for input_js in files:
-                        base, ext = os.path.splitext(input_js)
-                        output_js = f"{base}_decoded{ext}"
-                        run_decode_js(
-                            os.path.abspath(input_js), os.path.abspath(output_js)
-                        )
+        if "index.html" in files and "assets" in dirs:
+            assets_dir = os.path.join(root, "assets")
+            for sub in ("game", "main"):
+                target_dir = os.path.join(assets_dir, sub)
+                if os.path.isdir(target_dir):
+                    pattern = os.path.join(target_dir, "index*.js")
+                    js_files = glob.glob(pattern)
+                    for input_js in js_files:
+                        # 直接替换原始文件：写入同目录的临时文件后原子替换
+                        input_abs = os.path.abspath(input_js)
+                        tmp_out = input_abs + ".tmp"
+                        try:
+                            run_decode_js(input_abs, tmp_out)
+                            os.replace(tmp_out, input_abs)
+                            total_decoded += 1
+                        except subprocess.CalledProcessError as e:
+                            print(f"解码失败: {input_abs}\n{e}")
+                            if os.path.exists(tmp_out):
+                                try:
+                                    os.remove(tmp_out)
+                                except Exception:
+                                    pass
+                        except Exception as e:
+                            print(f"处理文件出错: {input_abs} -> {e}")
+                            if os.path.exists(tmp_out):
+                                try:
+                                    os.remove(tmp_out)
+                                except Exception:
+                                    pass
+
+    print(f"decode_index_js_files 完成，共处理 {total_decoded} 个文件")
 
 
 def build_all():
@@ -230,7 +236,7 @@ def build_all():
     # 添加並轉換文件(png->astc)
     convert_webp_to_astc(convert_folder_path, convert_astcenc_path)
     # 解码 JavaScript 文件
-#     decode_index_js_files()
+    decode_index_js_files()
     pass
 
 
