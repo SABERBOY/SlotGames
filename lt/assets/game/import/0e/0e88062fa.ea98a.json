@@ -1,0 +1,207 @@
+[
+  1,
+  ["1a068db9d@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 227, "y": 510, "width": 407, "height": 53 },
+          "offset": { "x": 0.5, "y": 0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 167, "y": 510, "width": 461, "height": 54 },
+          "offset": { "x": 0.5, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "Txt_BG_Declare_01",
+            "a9DdkZ4CNA6Yi2E2ahiVz+@f9941",
+            "Txt_ExtraPay01",
+            "e8FxPWpZNOjZb4LHBtlp7g@f9941",
+            "String_01",
+            "80I7wmDNNEG7thT/IxzSvx@f9941",
+            "txt1",
+            "5aljn6jo9OrbbXcsWj4fgG@f9941",
+            "txt2",
+            "0ciq7vcBpHYavjmAE58da/@f9941",
+            "Txt_BG_Declare_02",
+            "afxQEDoK1J/4nnHP10mNbu@f9941",
+            "MG_specialTXT_01s",
+            "f23Pr8UfxFSJVm3/Cj7QZb@f9941",
+            "String_00",
+            "b1mzlc7MpBhJacKUp9F+bb@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 90, "y": 3, "width": 501, "height": 232 },
+          "offset": { "x": -5, "y": 0 },
+          "originalSize": { "width": 511, "height": 232 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_BG_Declare_01",
+          "rect": { "x": 3, "y": 3, "width": 551, "height": 81 },
+          "offset": { "x": 0, "y": -3 },
+          "originalSize": { "width": 581, "height": 121 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_BG_Declare_02",
+          "rect": { "x": 286, "y": 510, "width": 496, "height": 49 },
+          "offset": { "x": 1.5, "y": -3 },
+          "originalSize": { "width": 581, "height": 71 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 341, "y": 3, "width": 516, "height": 46 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 516, "height": 46 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Txt_ExtraPay01",
+          "rect": { "x": 3, "y": 560, "width": 438, "height": 158 },
+          "offset": { "x": -2, "y": -4 },
+          "originalSize": { "width": 460, "height": 230 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "MG_specialTXT_01s",
+          "rect": { "x": 167, "y": 977, "width": 106, "height": 39 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 120, "height": 40 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
