@@ -1,4 +1,4 @@
-System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", "cc"], function (_0x3e625f, _0x4573f3) {
+System.register("chunks:///other.js", ["./FeatureManagerComponent-3db6e630.js", "cc"], function (_0x3e625f, _0x4573f3) {
   "use strict";
 
   var _0x5fa33e;
