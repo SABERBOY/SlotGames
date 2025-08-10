@@ -1,0 +1,575 @@
+[
+  1,
+  ["19655d8dc@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "Payboard_Text5000",
+          "rect": { "x": 116, "y": 757, "width": 470, "height": 55 },
+          "offset": { "x": -16, "y": 0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "payboard_num_wheel_3",
+          "rect": { "x": 592, "y": 757, "width": 14, "height": 20 },
+          "offset": { "x": 0.5, "y": 0 },
+          "originalSize": { "width": 21, "height": 20 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text10",
+          "rect": { "x": 116, "y": 626, "width": 416, "height": 47 },
+          "offset": { "x": -43, "y": -0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "payboard_num_wheel_2",
+          "rect": { "x": 533, "y": 565, "width": 13, "height": 19 },
+          "offset": { "x": 1, "y": -0.5 },
+          "originalSize": { "width": 21, "height": 20 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text500000",
+          "rect": { "x": 55, "y": 565, "width": 472, "height": 55 },
+          "offset": { "x": -15, "y": -0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text1",
+          "rect": { "x": 297, "y": 946, "width": 379, "height": 47 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 379, "height": 47 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text1000000",
+          "rect": { "x": 552, "y": 333, "width": 418, "height": 56 },
+          "offset": { "x": -42, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 3, "y": 3, "width": 543, "height": 354 },
+          "offset": { "x": -6.5, "y": 1.5 },
+          "originalSize": { "width": 564, "height": 365 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 629, "y": 3, "width": 451, "height": 53 },
+          "offset": { "x": -0.5, "y": -0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "betText_100",
+          "rect": { "x": 116, "y": 946, "width": 175, "height": 54 },
+          "offset": { "x": -18.5, "y": 0 },
+          "originalSize": { "width": 214, "height": 54 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "payboard_num_wheel_1",
+          "rect": { "x": 614, "y": 333, "width": 8, "height": 19 },
+          "offset": { "x": 0.5, "y": -0.5 },
+          "originalSize": { "width": 21, "height": 20 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_01",
+            "3bJpVJCnJIy5Vv2gD2HkG6@f9941",
+            "Luckyweel_text",
+            "fcTF76onhGRowe76TKXzOk@f9941",
+            "txt1",
+            "425ttQZTJFcJbDASSMe/Vi@f9941",
+            "Payboard_Text1000000",
+            "38nd0w8sdDGLDIMjwPCp+C@f9941",
+            "payboard_num_wheel_1",
+            "57pWk4fuJHCKvQhz9diymQ@f9941",
+            "Payboard_Text50",
+            "b6A4fFIt9LLJuFOl+D1ZOx@f9941",
+            "Payboard_Text0.1",
+            "980Ix6JqJMlqhv8j6wZUF5@f9941",
+            "String_00",
+            "d8gyfv/rlO+pMH5WYoAz7b@f9941",
+            "Payboard_Text50000",
+            "feYrS/SApPVoCT8Fe2B0Zi@f9941",
+            "Payboard_Text500000",
+            "2cxMWtqmVBfaEYpH9blPRZ@f9941",
+            "payboard_num_wheel_2",
+            "1ftXeOZH5DYKYs6yqC0dAY@f9941",
+            "Payboard_Text5",
+            "691sNEoUJJaI1FtDxWDBoc@f9941",
+            "Payboard_Text10",
+            "1fNQz+JeVAgKI9dDP/BJ9l@f9941",
+            "Payboard_Text5000",
+            "04236w3oVPbLxXoCTWSj4w@f9941",
+            "payboard_num_wheel_3",
+            "16sj9PiktA3pOIehD/99rL@f9941",
+            "Payboard_Text2",
+            "c2QD5oIW9FwokI9HAKLYs9@f9941",
+            "Payboard_Text100000",
+            "72MzB5s31Iwo23Of1fPW9A@f9941",
+            "Payboard_Text4",
+            "dfTiuIjihJg6xdNa4S78gL@f9941",
+            "betText_100",
+            "54MUUdrRNEnLe6dwfNPn/+@f9941",
+            "Payboard_Text1",
+            "2ftNVaaLlBV6DZmTdDXDtW@f9941",
+            "betText_1",
+            "a6AVYkGAJHLpEpIAJwrE8f@f9941",
+            "Payboard_Text3",
+            "96FeYyUk9DgYDx/fs8lgd9@f9941",
+            "betText_10",
+            "80sQ9Ka/FFPIEQui1rhvRm@f9941",
+            "txt2",
+            "b6XSQSLyBBUaWhHXNa5RfV@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text5",
+          "rect": { "x": 55, "y": 626, "width": 386, "height": 55 },
+          "offset": { "x": -58, "y": -0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text100000",
+          "rect": { "x": 116, "y": 818, "width": 467, "height": 49 },
+          "offset": { "x": -17.5, "y": -0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "betText_10",
+          "rect": { "x": 3, "y": 470, "width": 159, "height": 45 },
+          "offset": { "x": -26.5, "y": -0.5 },
+          "originalSize": { "width": 214, "height": 54 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text3",
+          "rect": { "x": 3, "y": 416, "width": 365, "height": 48 },
+          "offset": { "x": 0.5, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text0.1",
+          "rect": { "x": 3, "y": 363, "width": 493, "height": 47 },
+          "offset": { "x": -4.5, "y": 0.5 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "betText_1",
+          "rect": { "x": 478, "y": 884, "width": 159, "height": 53 },
+          "offset": { "x": -26.5, "y": -0.5 },
+          "originalSize": { "width": 214, "height": 54 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text50",
+          "rect": { "x": 614, "y": 460, "width": 418, "height": 56 },
+          "offset": { "x": -42, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 168, "y": 470, "width": 315, "height": 25 },
+          "offset": { "x": 0.5, "y": -0.5 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text2",
+          "rect": { "x": 116, "y": 679, "width": 362, "height": 56 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 502, "y": 363, "width": 196, "height": 26 },
+          "offset": { "x": 1, "y": -0.5 },
+          "originalSize": { "width": 400, "height": 51 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text4",
+          "rect": { "x": 116, "y": 884, "width": 356, "height": 56 },
+          "offset": { "x": -4, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Luckyweel_text",
+          "rect": { "x": 552, "y": 3, "width": 324, "height": 71 },
+          "offset": { "x": 2, "y": 0.5 },
+          "originalSize": { "width": 424, "height": 86 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "Payboard_Text50000",
+          "rect": { "x": 3, "y": 565, "width": 442, "height": 46 },
+          "offset": { "x": -30, "y": 0 },
+          "originalSize": { "width": 540, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
