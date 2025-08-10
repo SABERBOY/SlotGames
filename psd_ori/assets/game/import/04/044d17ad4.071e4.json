@@ -1,0 +1,299 @@
+[
+  1,
+  ["1aa6f9c7c@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "TXT_BG_Bonus",
+          "rect": { "x": 545, "y": 3, "width": 494, "height": 121 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 578, "height": 121 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_BG_Totalwin",
+          "rect": { "x": 672, "y": 3, "width": 200, "height": 33 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 200, "height": 40 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_Compliment",
+          "rect": { "x": 3, "y": 323, "width": 368, "height": 79 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 368, "height": 79 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 130, "y": 656, "width": 465, "height": 48 },
+          "offset": { "x": -0.5, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_02",
+            "c8sMmEkAtOsKn7rHmIHTRv@f9941",
+            "TXT_Compliment",
+            "3dbiZbNmhAa52Z+pL0631C@f9941",
+            "TXT_BG_Bonus",
+            "08+F3A9AJHK5pS+9S+awD7@f9941",
+            "String_00",
+            "c4Dwci4flC1K2QoLt8XDGl@f9941",
+            "TXT_FG_Declare",
+            "ec3Tc8quROZrtXxpmkOm9L@f9941",
+            "TXT_BG_Totalwin",
+            "30aXlLldNKY4yDzBrK02EI@f9941",
+            "TXT_BG_Game",
+            "931UcbDMhDl4duDUH6eQPf@f9941",
+            "txt2",
+            "6alMtO5QtLqp0o+jrhxUiT@f9941",
+            "String_01",
+            "b0Q69iGNBBiJ5j2BMHQU9B@f9941",
+            "TXT_History_Win",
+            "ebwu4xjTZClpKZcpZBqS/G@f9941",
+            "String_03",
+            "c5AGasx4tO0Zw7MvZkFNXm@f9941",
+            "txt1",
+            "5b69p0be1HCqA64HxIG0As@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 672, "y": 209, "width": 316, "height": 26 },
+          "offset": { "x": 0, "y": -2 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_BG_Game",
+          "rect": { "x": 88, "y": 443, "width": 290, "height": 46 },
+          "offset": { "x": 0, "y": -0.5 },
+          "originalSize": { "width": 294, "height": 57 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 130, "y": 503, "width": 500, "height": 66 },
+          "offset": { "x": -18.5, "y": 0.5 },
+          "originalSize": { "width": 541, "height": 67 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 88, "y": 503, "width": 207, "height": 36 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 207, "height": 36 },
+          "rotated": true,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_03",
+          "rect": { "x": 130, "y": 575, "width": 471, "height": 75 },
+          "offset": { "x": -35, "y": -0.5 },
+          "originalSize": { "width": 541, "height": 76 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_02",
+          "rect": { "x": 3, "y": 3, "width": 536, "height": 314 },
+          "offset": { "x": -2.5, "y": 0 },
+          "originalSize": { "width": 541, "height": 314 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_History_Win",
+          "rect": { "x": 636, "y": 531, "width": 67, "height": 19 },
+          "offset": { "x": 0, "y": -1 },
+          "originalSize": { "width": 67, "height": 29 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Declare",
+          "rect": { "x": 88, "y": 323, "width": 444, "height": 114 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 444, "height": 114 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
