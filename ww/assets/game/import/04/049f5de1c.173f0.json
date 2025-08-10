@@ -1,0 +1,368 @@
+[
+  1,
+  ["1c9d3412f@6c48a"],
+  ["_textureSource"],
+  ["cc.SpriteFrame", "cc.SpriteAtlas"],
+  0,
+  [
+    [
+      [
+        {
+          "name": "FG_Add_Won",
+          "rect": { "x": 755, "y": 63, "width": 186, "height": 88 },
+          "offset": { "x": 0.5, "y": -3.5 },
+          "originalSize": { "width": 431, "height": 179 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Declare_01",
+          "rect": { "x": 3, "y": 523, "width": 503, "height": 164 },
+          "offset": { "x": 0.5, "y": -8 },
+          "originalSize": { "width": 600, "height": 200 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_03",
+          "rect": { "x": 3, "y": 132, "width": 415, "height": 82 },
+          "offset": { "x": -21, "y": 0 },
+          "originalSize": { "width": 535, "height": 92 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt2",
+          "rect": { "x": 330, "y": 3, "width": 304, "height": 54 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_04",
+          "rect": { "x": 475, "y": 378, "width": 460, "height": 139 },
+          "offset": { "x": 0.5, "y": 1 },
+          "originalSize": { "width": 535, "height": 143 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_01",
+          "rect": { "x": 424, "y": 157, "width": 363, "height": 93 },
+          "offset": { "x": -45.5, "y": -1.5 },
+          "originalSize": { "width": 534, "height": 98 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "txt1",
+          "rect": { "x": 640, "y": 3, "width": 353, "height": 54 },
+          "offset": { "x": -0.5, "y": 0 },
+          "originalSize": { "width": 470, "height": 56 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_02",
+          "rect": { "x": 3, "y": 378, "width": 466, "height": 118 },
+          "offset": { "x": 5.5, "y": 1.5 },
+          "originalSize": { "width": 535, "height": 123 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "FG_Add_Free_Games",
+          "rect": { "x": 3, "y": 220, "width": 378, "height": 103 },
+          "offset": { "x": 3.5, "y": -9 },
+          "originalSize": { "width": 431, "height": 179 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Compliment_fg",
+          "rect": { "x": 3, "y": 42, "width": 306, "height": 58 },
+          "offset": { "x": 69, "y": -1 },
+          "originalSize": { "width": 600, "height": 82 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Declare_03",
+          "rect": { "x": 387, "y": 256, "width": 611, "height": 116 },
+          "offset": { "x": -0.5, "y": 2 },
+          "originalSize": { "width": 642, "height": 136 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Counter_01",
+          "rect": { "x": 143, "y": 3, "width": 181, "height": 33 },
+          "offset": { "x": 0, "y": 0 },
+          "originalSize": { "width": 193, "height": 55 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Compliment_01",
+          "rect": { "x": 512, "y": 523, "width": 503, "height": 164 },
+          "offset": { "x": 0.5, "y": -8 },
+          "originalSize": { "width": 600, "height": 270 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "GameTextImg",
+          "spriteFrames": [
+            "String_00",
+            "e9CmhnbmJMfadXUqtaQx0f@f9941",
+            "TXT_FG_Counter_01",
+            "a1AKYZpz9MPqZbHke3de1g@f9941",
+            "txt2",
+            "2acISXd6hErbBJIaCKCzwo@f9941",
+            "txt1",
+            "7abul+uLpB34rGd3metQMH@f9941",
+            "TXT_FG_Compliment_fg",
+            "84zzhcQixHkoUX74Mrh74U@f9941",
+            "TXT_FG_Compliment_02",
+            "adU8GTpZVCzr4zif0nDQ86@f9941",
+            "FG_Add_Won",
+            "070zq+wa1CAr5R0nJZW2Sl@f9941",
+            "String_03",
+            "21VROuGnxDn5mHE5EfmFq4@f9941",
+            "String_01",
+            "6cdShGhdJJg61xncytVqvk@f9941",
+            "FG_Add_Free_Games",
+            "82UFgzCW9Bxo2Hyv5/eBMh@f9941",
+            "TXT_FG_Declare_03",
+            "9fMTwgj+1JoYr8i8+Wqte3@f9941",
+            "String_02",
+            "7f3POxAdJLZY5Pt269NOsF@f9941",
+            "String_04",
+            "38Svj/7K9P35zhIMlesfMI@f9941",
+            "TXT_FG_Declare_01",
+            "21LWbUXcFDgLFxjGSxjPMR@f9941",
+            "TXT_FG_Compliment_01",
+            "a1IZrhiXNITb7MqDP67sSO@f9941"
+          ]
+        }
+      ],
+      [1],
+      0,
+      [],
+      [],
+      []
+    ],
+    [
+      [
+        {
+          "name": "TXT_FG_Compliment_02",
+          "rect": { "x": 315, "y": 63, "width": 434, "height": 63 },
+          "offset": { "x": -3, "y": -2.5 },
+          "originalSize": { "width": 638, "height": 78 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ],
+    [
+      [
+        {
+          "name": "String_00",
+          "rect": { "x": 3, "y": 3, "width": 134, "height": 30 },
+          "offset": { "x": 0, "y": -3 },
+          "originalSize": { "width": 532, "height": 38 },
+          "rotated": false,
+          "capInsets": [0, 0, 0, 0],
+          "packable": true,
+          "pixelsToUnit": 100,
+          "pivot": { "x": 0.5, "y": 0.5 },
+          "meshType": 0
+        }
+      ],
+      [0],
+      0,
+      [0],
+      [0],
+      [0]
+    ]
+  ]
+]
