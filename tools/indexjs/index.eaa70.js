@@ -37577,7 +37577,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-3db6e630.js", 
             }
             const ssoUrl = ssoRequest.url;
             const urlData = new URL(ssoUrl);
-            let url = DW_URL_HTTP + "/sso-login.api";
+            let url = ssoUrl;
             if (ssoUrl.endsWith("sso-login.api")) {
                 url = DW_URL_HTTP + "/sso-login.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
             } else if (ssoUrl.endsWith("req")) {
