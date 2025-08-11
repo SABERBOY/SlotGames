@@ -24305,10 +24305,10 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
           }, !_0x5a5ef8.isNative && !_0x2ca76f) {
             this.m_webUrl = _0x12b17b.GetWebUrl();
             var _0x473558 = /\?/g;
-            this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x473558));
+            // this.m_webUrl = this.m_webUrl.slice(0, this.m_webUrl.search(_0x473558));
             var _0x5184a2 = _0x12b17b.GetWebUrl();
             var _0x3407ab = /\.com/g;
-            _0x5184a2 = _0x5184a2.slice(0, _0x5184a2.search(_0x3407ab) + 4) + "/smallicon/setting.json";
+            _0x5184a2 = this.m_webUrl + "/smallicon/setting.json";
             var _0x879f3 = _0x12b17b.GetWebUrl();
             _0x879f3 = (_0x879f3 = _0x879f3.slice(_0x879f3.search(_0x3407ab) + 5, _0x879f3.search(_0x473558) - 1)).replace("/index.htm", "");
             _0x48fe5a.loadRemote(_0x5184a2, {
@@ -24735,7 +24735,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
             var _0x4de22 = _0x1b7d0f.ERROR_URL;
             var _0x3674ae = "?";
             for (var _0x951e8c in _0x25808b) _0x3674ae += _0x951e8c + "=" + _0x25808b[_0x951e8c] + "&";
-            _0x337d12(_0x5676fc.TYPE_GET, _0x4de22 + _0x3674ae);
+            // _0x337d12(_0x5676fc.TYPE_GET, _0x4de22 + _0x3674ae);
           }
         };
         _0x38046b.SendVerificationEvent = function (_0x20e72c) {
