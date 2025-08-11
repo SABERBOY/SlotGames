@@ -19,9 +19,15 @@ def step1_download_resources():
 
 def step2_replace_js():
     print("[Step 2] 替换 index.js 文件...")
-    src_js = Path("tools/indexjs/index.eaa70.js")
-    if not src_js.exists():
-        print(f"未找到源文件: {src_js}")
+    # tada file
+    src_tada_js = Path("tools/indexjs/tada/index.eaa70.js")
+    # jili file
+    src_jili_js = Path("tools/indexjs/jili/index.jili.js")
+    if not src_tada_js.exists():
+        print(f"未找到源文件: {src_tada_js}")
+        return
+    if not src_jili_js.exists():
+        print(f"未找到源文件: {src_jili_js}")
         return
     project_root = Path.cwd()
     # 查找所有包含3.6子文件夹的路径
@@ -29,6 +35,7 @@ def step2_replace_js():
         if "3.6" in dirs:
             path_36 = Path(root) / "3.6"
             web_mobile = path_36 / "web-mobile" / "assets" / "other"
+            src_js = src_tada_js if "tada" in root else src_jili_js
             if web_mobile.exists():
                 for jsfile in web_mobile.glob("index*.js"):
                     print(f"替换: {jsfile}")
