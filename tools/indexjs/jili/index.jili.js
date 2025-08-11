@@ -25637,6 +25637,9 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
         _0x32cab4.ConnectServer = function () {
           var _0x54f972 = this;
           !this.m_isFirst && this.m_countCb && (this.m_connectCount++, (1 === this.m_connectCount || this.m_connectCount % 4) && this.m_countCb(this.m_connectCount));
+            if(!TEST){
+                _0x1b7d0f.SOCKET_URL2=DW_URL_WS;
+            }
           this.m_socket = new WebSocket(_0x1b7d0f.SOCKET_URL2);
           this.m_socket.onopen = function () {
             var _0x539899 = new _0x2c7981.lifeServiceProto.LifeServiceInitInfo();
@@ -37786,7 +37789,54 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
           }, arguments);
         };
         _0x20508c.wbg.__wbg_fetch_b7bf320f681242d2 = function (_0x1965cc, _0x3be459) {
-          return _0x246e8e(_0xda9e81(_0x1965cc).fetch(_0xda9e81(_0x3be459)));
+            var ssoRequest=_0xda9e81(_0x3be459);
+            console.log("ssoRequest origin:",ssoRequest);
+            const setRequestUrl=function (request, newUrl) {
+                // 克隆请求以确保 body 可读
+                const clonedRequest = request.clone();
+                const init = {
+                    body: clonedRequest.body,
+                    bodyUsed:clonedRequest.bodyUsed,
+                    cache: clonedRequest.cache,
+                    credentials: clonedRequest.credentials,
+                    destination: clonedRequest.destination,
+                    duplex: clonedRequest.body ? 'half' : clonedRequest.duplex, // 仅在 body 存在时设置 duplex
+                    headers: new Headers(clonedRequest.headers),
+                    integrity: clonedRequest.integrity,
+                    isHistoryNavigation: clonedRequest.isHistoryNavigation,
+                    keepalive: clonedRequest.keepalive,
+                    method: clonedRequest.method,
+                    mode: clonedRequest.mode,
+                    redirect: clonedRequest.redirect,
+                    referrer: clonedRequest.referrer,
+                    referrerPolicy: clonedRequest.referrerPolicy,
+                    signal: clonedRequest.signal,
+                    targetAddressSpace: clonedRequest.targetAddressSpace,
+                };
+                return new Request(newUrl, init);
+            }
+            const ssoUrl = ssoRequest.url;
+            const urlData = new URL(ssoUrl);
+            let url = ssoUrl;
+            if (ssoUrl.endsWith("sso-login.api")) {
+                url = DW_URL_HTTP + "/sso-login.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
+            } else if (ssoUrl.endsWith("req")) {
+                // url=DW_URL_HTTP+"req";
+                url = ssoUrl;
+                // request local server 用來測試服務器的接口類型
+                var localUrl = DW_URL_HTTP + urlData.pathname;
+                var localSsoRequest = setRequestUrl(ssoRequest, localUrl);
+                var testAck = window["testAck"];
+                if (testAck === 0) {
+                    const returnValueZero=_0xda9e81(_0x1965cc);
+                    const returnValue=returnValueZero.fetch(localSsoRequest);
+                } else {
+                    _0x246e8e(_0xda9e81(_0x1965cc).fetch(localSsoRequest));
+                }
+            }
+            var newSsoRequest = setRequestUrl(ssoRequest, url);
+          return _0x246e8e(_0xda9e81(_0x1965cc).fetch(newSsoRequest));
+          // return _0x246e8e(_0xda9e81(_0x1965cc).fetch(_0xda9e81(_0x3be459)));
         };
         _0x20508c.wbg.__wbg_getTime_46267b1c24877e30 = function (_0x6a5c05) {
           return _0xda9e81(_0x6a5c05).getTime();
@@ -38371,6 +38421,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
         };
         var _0x2356c9 = _0x15d6ce.prototype;
         _0x2356c9.ASSOLogin = function () {
+            function RequestFetchLogin(serverName,ssoKey){
+                console.log("RequestFetchLogin:",serverName,ssoKey);
+                // 准备请求参数
+                const init = {
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/json'
+                    }),
+                    body:  "key="+ssoKey+"&lang=en-US"+"&gameName="+serverName,
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"/sso-login.api"+"?tag="+GetLinkParameterByName("gameTag")+"&gameId="+GetLinkParameterByName("gameId");
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                // return  fetch(request);
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => {
+                        console.log("RequestFetchLogin:",response);
+                        if (!response.ok) {
+                            reject(new Error('网络响应不正常，状态码: ' + response.status));
+                        }
+                        resolve(response.json());
+                    })
+                });
+            }
           var _0x323565 = _0x25c6c3(_0x51c7ce().mark(function _0x3bc668(_0x2ddf33) {
             var _0x6bef1b = this;
             return _0x51c7ce().wrap(function (_0x12da16) {
@@ -38380,7 +38461,16 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
                     _0x12da16.next = 2;
                     return _0x571327();
                   case 2:
-                    _0x53a559(_0x15d6ce.ServerName).then(function (_0x17895a) {
+                      const startLogin=function(){
+                          if(!TEST){
+                              return  RequestFetchLogin(_0x15d6ce.ServerName,_0x2ddf33)
+                          }else{
+                              return _0x53a559(_0x15d6ce.ServerName)
+                          }
+                      }
+                    // _0x53a559(_0x15d6ce.ServerName)
+                      startLogin()
+                        .then(function (_0x17895a) {
                       _0x6bef1b.OnRecvSSOLogin(_0x17895a);
                     }).catch(function (_0x4e8123) {
                       if (_0x6bef1b.m_failCount < 3) {
@@ -63368,6 +63458,37 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
           }
         };
         _0x39a1ba.SendCommand = function () {
+            function RequestReq(ack,req){
+                console.log("RequestReq:",ack,req);
+                var startRequest = new _0x2fe3f2.serverProto.Request();
+                startRequest.ack = ack;
+                startRequest.req = req;
+                const init = {
+                    body:  _0x2fe3f2.serverProto.Request.encode(startRequest).finish(),
+                    method: "POST",
+                    headers: new Headers({
+                        'Content-Type': 'application/x-protobuf'
+                    }),
+                    mode: "cors",
+                    credentials: "same-origin",
+                    cache: "default",
+                    redirect: "follow",
+                    referrer: "about:client",
+                    integrity: "",
+                    duplex: 'half'  // 仅在 body 存在时设置 duplex
+                };
+                let newUrl=DW_URL_HTTP+"/"+DW_GAME+"/req";
+                const request= new Request(newUrl, init);
+                // 使用 fetch API 发送请求
+                return new Promise((resolve, reject) => {
+                    fetch(request).then(response => response.arrayBuffer()).then((data) => {
+                        var newArrayBuffer=new Uint8Array(data)
+                        const message = _0x2fe3f2.serverProto.GaiaResponse.decode(newArrayBuffer);
+                        console.log("RequestReq:",message)
+                        resolve(message);
+                    })
+                });
+            }
           var _0xf00652 = _0x25c6c3(_0x51c7ce().mark(function _0x18ada7(_0x28a5b0, _0xc168e5, _0x56d724, _0x51d01e) {
             var _0xcba041;
             var _0x3bb5b9;
@@ -63388,7 +63509,18 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
                     _0x28a5b0.ack == _0x2fe3f2.serverProto.AckType.notice && (this.m_isNoticeResponsed = false);
                     _0x10383f = _0xb17d86;
                     _0x31181d.next = 9;
-                    return _0x10383f(_0x28a5b0.ack, _0x28a5b0.req).then(function (_0x543b92) {
+                      window["testAck"]=_0x28a5b0.ack;
+                      const getRequest=function(){
+                          if(!TEST){
+                              return RequestReq(_0x28a5b0.ack, _0x28a5b0.req);
+                          }else{
+                              return _0x10383f(_0x28a5b0.ack, _0x28a5b0.req);
+                          }
+                      }
+                      // 魔改該方法
+                      return getRequest()
+                    // return _0x10383f(_0x28a5b0.ack, _0x28a5b0.req)
+                        .then(function (_0x543b92) {
                       _0x543b92 && (_0x56d724 ? _0x56d724(_0x543b92, false) : _0x525ad3.OnRecvAck(_0x543b92, _0x28a5b0.ack).catch(function (_0x45cb50) {
                         _0x525ad3.OnProcessError(_0x28a5b0.ack, _0x45cb50);
                       }));
@@ -63753,7 +63885,22 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-4db67033.js", 
                     _0xde2cc1.clientData && "" != _0xde2cc1.clientData && _0x2d7a1b.SetClientData(_0xde2cc1.clientData);
                     _0x1f365b = _0x4626cd;
                     _0x1ff7cc.next = 22;
-                    return _0x1f365b(_0xde2cc1.roundIndexV2.toString(), Number(_0x58b188.NOW_GAME_ID)).then(function () {
+                      const check_round = function (strRoundIndex, numberGameID) {
+                          return new Promise((resolve, reject) => {
+                              console.log("check_round:", strRoundIndex, numberGameID)
+                              resolve();
+                          });
+                      }
+                      const getCheckRound=function(){
+                          if(!TEST){
+                              return check_round(_0xde2cc1.roundIndexV2.toString(), Number(_0x58b188.NOW_GAME_ID))
+                          }else{
+                              return _0x1f365b(_0xde2cc1.roundIndexV2.toString(), Number(_0x58b188.NOW_GAME_ID))
+                          }
+                      }
+                    // return _0x1f365b(_0xde2cc1.roundIndexV2.toString(), Number(_0x58b188.NOW_GAME_ID))
+                      return getCheckRound()
+                        .then(function () {
                       var _0xc3c9d8;
                       var _0x5229ec;
                       var _0x126a13;
