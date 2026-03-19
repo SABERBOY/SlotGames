@@ -43364,7 +43364,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
         _0x43c574.SetGameSpeed = function (_0x42ac7f) {
           var _0x27f700 = this;
           _0x4039df.tick = function (_0x2195fe) {
-            _0x27f700.m_curTick.call(_0x4039df, _0x2195fe * _0x42ac7f);
+           if(_0x27f700.m_curTick)_0x27f700.m_curTick.call(_0x4039df, _0x2195fe * _0x42ac7f);
             _0x27f700.m_curGameSpeed = _0x42ac7f;
           };
         };
@@ -90193,7 +90193,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             _0xd8ef65.ontimeout = function () {
               _0x23a1f2();
             };
-            _0xd8ef65.send();
+            // _0xd8ef65.send();
           }("" + _0x56b777.GetSmallIconUrl() + _0x5b8a31, 0, 3);
         });
       }
@@ -90421,7 +90421,7 @@ System.register("chunks:///other.js", ["./FeatureManagerComponent-9dda467a.js", 
             _0x31a288.ontimeout = function () {
               _0x48a175();
             };
-            _0x31a288.send();
+            // _0x31a288.send();
           }("" + _0x56b777.GetSmallIconUrl() + _0x2faba9, 0, 3);
         });
       }
